@@ -4,7 +4,8 @@
   "description": "A small group project to demo Node-Express and practice agile methodologies.",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "mocha ./test/test.js"    
   },
   "repository": {
     "type": "git",
