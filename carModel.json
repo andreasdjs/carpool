@@ -3,7 +3,13 @@
 		"carname":"volvo",
 		
 		"bil1":{
-			"name":"volvo v40",
+			"Name":"volvo v40",
+			"Regnummer":"uge678",
+			"Typ":"",
+			"Drivmedel":"disel",
+			"Kontrollbesikting":"",
+			"Service":"",
+			"Status":"Bokad",
 			"Passengers":"5",
 			"AirCondition":"yes",
 			"Doors":"5",
@@ -11,6 +17,18 @@
 			"DrivingLicense":"2 yrs min",
 			"Transmission":"manual"
 				},
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 		
 		"bil2":{
 			"name":"volvo c70",
