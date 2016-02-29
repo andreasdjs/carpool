@@ -1,10 +1,33 @@
 var expect = require('chai').expect;
-var myFunction = require('../modules/modules').myFunction;
+//var myFunction = require('../modules/modules').myFunction;
+var myFunction = require('../modules/testModule').myFunction;
 // var getInfoLang = require('./async').getInfoLang;
 var sinon = require('sinon');
 var chai = require('chai');
 var sinonChai = require('sinon-chai');
 chai.use(sinonChai);
+
+
+describe('Test of read JSON-file.', function() {
+
+// Test callback function
+
+/*
+	it('returns language', function(done) {
+		var ghLang = {
+			'language': 'GUGGE'
+		};
+		var stub = sinon.stub().callsArgWith(0, ghLang);
+
+		getInfoLang(stub, function(reply) {
+			expect(reply).to.equal('Language is GUGGE');
+			done();
+		});
+	});
+*/
+
+});
+
 
 describe('Get info from .JSON-file on GitHub.', function() {
 	it('Empty test.', function(done) {

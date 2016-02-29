@@ -1,8 +1,202 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@charset "UTF-8";
+
+html { 
+	height: 100%; 
+    min-height: 100%;
 }
 
-a {
-  color: #00B7FF;
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, Calibri, sans-serif; 
+	font-size: 18px;
+	margin:0; /* Remove default margins */
+	height: 100%;
+	}
+
+#container {
+	margin-left:32px;
+	margin-top:16px;
+	width: 510px; /* Limiting words per line for readability */
 }
+
+ul, li { padding: 0px; margin: 0px;}
+
+ul li {
+	list-style-type: none; /* remove bullets */
+	margin: 0px;
+}
+
+#description {
+	width:95%;
+	
+	height:200px;
+	}
+	
+#name {
+	background:white;
+	width:95%;
+	text-align:center;
+	height:20px;
+	margin-bottom:1%;
+	font-size:.9em;
+	}
+
+nav {
+	background-color: black;
+	margin:0;
+	border-bottom: 1px solid black;
+}
+
+nav ul {
+	width: 100%; 
+	margin: 0; /* reset margins */ 
+	padding: 0;
+	list-style-type: none; /* remove bullets */
+}
+
+nav ul li {
+	line-height: 60px;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+	display: inline-block; /* horisontal position */
+}
+
+nav ul li a {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li a:hover { 
+	color: #e0e0e0;
+}
+
+/* Inherit font size (from Mozilla Developer Network) */
+
+button, input, select, textarea {
+  font-family : inherit; 
+  font-size   : 100%;
+  padding: 12px;
+}
+
+/* add form */
+
+#add {
+	padding-left: 32px;
+}
+
+form h1 { margin-bottom: 16px;}
+
+/* Input */
+
+input {
+	margin-bottom: 2px;
+}
+
+/* Input focused with fat bottom border below */
+
+input:focus { 
+	border-bottom: solid #10C010 4px;
+	margin-bottom: 0px;
+}
+
+/* Submit button */
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #71d685;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #71d685;
+	box-shadow:inset 0px 1px 0px 0px #71d685;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #71d685), color-stop(1, #59a368));
+	background:-moz-linear-gradient(top, #71d685 5%, #59a368 100%);
+	background:-webkit-linear-gradient(top, #71d685 5%, #59a368 100%);
+	background:-o-linear-gradient(top, #71d685 5%, #59a368 100%);
+	background:-ms-linear-gradient(top, #71d685 5%, #59a368 100%);
+	background:linear-gradient(to bottom, #71d685 5%, #59a368 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#71d685', endColorstr='#59a368',GradientType=0);
+	background-color:#71d685;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px; 
+	border:1px solid #5c9467;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:16px 32px; 
+	text-decoration:none;
+	text-shadow:0px 1px 0px #387545;
+	width: 216px;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #59a368), color-stop(1, #71d685));
+	background:-moz-linear-gradient(top, #59a368 5%, #71d685 100%);
+	background:-webkit-linear-gradient(top, #59a368 5%, #71d685 100%);
+	background:-o-linear-gradient(top, #59a368 5%, #71d685 100%);
+	background:-ms-linear-gradient(top, #59a368 5%, #71d685 100%);
+	background:linear-gradient(to bottom, #59a368 5%, #71d685 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#59a368', endColorstr='#71d685',GradientType=0);
+	background-color:#59a368;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* Product page */ 
+
+#product h1 {
+ text-transform: uppercase;
+ margin-bottom:0px;
+}
+
+#product h3 {
+  margin-top: 0px;
+}
+
+/* List products */
+
+#productList h1 {
+  text-transform: uppercase;
+}
+
+#productList ul li {
+	margin-bottom: 4px;
+}
+
+#productList ul li a {
+	color: black;
+	text-decoration: none;
+	border-bottom: solid black 1px;
+}
+
+#productList ul li a:hover { 
+	color: #10C010;
+	text-decoration: none;	
+	border-bottom: solid #10C010 1px;
+}
+
+p {
+	line-height: 25px; /* Higher line height for readability */
+}
+
+/* Notification shows and then fades out */
+
+#notification {
+    color: #10C010;
+    -webkit-animation: fadeinout 2s linear forwards;
+    animation: fadeinout 2s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  	0% { opacity: 1; }
+	75% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes fadeinout {
+  	0% { opacity: 1; }
+	75% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+

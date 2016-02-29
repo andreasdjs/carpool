@@ -1,108 +1,208 @@
 {
-	"volvo":{
-		"carname":"volvo",
-		
-		"bil1":{
-			"name":"volvo v40",
-			"Passengers":"5",
-			"AirCondition":"yes",
-			"Doors":"5",
-			"MinimalAge":"21yr",
-			"DrivingLicense":"2 yrs min",
-			"Transmission":"manual"
-				},
-		
-		"bil2":{
-			"name":"volvo c70",
-			"Passengers":"2",
-			"AirCondition":"yes",
-			"Doors":"3",
-			"MinimalAge":"25yr",
-			"DrivingLicense":"5yr",
-			"Transmission":"manual"
-				}
-		
-		
-		
-		
+    "vehicles": [
+    	{
+    		"id":"1",
+    		"regNumber": "ABC123",
+			"brand": "Volvo",
+			"name":"V40",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "S",
+			"fuel": "diesel",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "1"
 		},
-		
-		
-	"bmw":{
-		"title":"bmw",
-		"Passengers":"5",
-		"AirCondition":"yes",
-		"Doors":"5",
-		"MinimalAge":"21yr",
-		"DrivingLicense":"2yr",
-		"Transmission":"manual"
+		{
+    		"id":"2",
+    		"regNumber": "ABC124",
+			"brand": "Volvo",
+			"name":"C70",
+			"passengers":"2",
+			"airCondition":"Yes",
+			"doors":"3",
+			"minimalAge":"25",
+			"yearsWithDrivingLicense":"5",
+			"transmission":"manuell",
+			"type": "S",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "2"
 		},
-		
-	"kia":{
-		"title":"kia",
-		"Passengers":"5",
-		"AirCondition":"yes",
-		"Doors":"5",
-		"MinimalAge":"21yr",
-		"DrivingLicense":"2yr",
-		"Transmission":"manual"
+		{
+    		"id":"3",
+    		"regNumber": "ABC125",    		
+			"brand": "BMW",
+			"name":"Model1",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "S",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "3"
 		},
-		
-	"opel":{
-		"title":"opel",
-		"Passengers":"5",
-		"AirCondition":"yes",
-		"Doors":"5",
-		"MinimalAge":"21yr",
-		"DrivingLicense":"2yr",
-		"Transmission":"manual"
+		{
+    		"id":"4",
+    		"regNumber": "ABC126",    		
+			"brand": "Kia",
+			"name":"Model2",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "M",
+			"fuel": "diesel",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "4"
 		},
-		
-	"ford":{
-		"title":"ford",
-		"Passengers":"5",
-		"AirCondition":"yes",
-		"Doors":"5",
-		"MinimalAge":"21yr",
-		"DrivingLicense":"2yr",
-		"Transmission":"manual"
+		{
+    		"id":"5",
+    		"regNumber": "ABC127",    		
+			"brand": "Opel",
+			"name":"Model3",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "M",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "5"
 		},
-		
-	"audi":{
-		"title":"audi",
-		"Passengers":"5",
-		"AirCondition":"yes",
-		"Doors":"5",
-		"MinimalAge":"21yr",
-		"DrivingLicense":"2yr",
-		"Transmission":"manual"
+		{
+    		"id":"6",
+    		"regNumber": "ABC128",    		
+			"brand": "Opel",
+			"name":"Model5",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "M",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "6"
 		},
-		
-	"saab":{
-		"title":"saab",
-		"Passengers":"5",
-		"AirCondition":"yes",
-		"Doors":"5",
-		"MinimalAge":"21yr",
-		"DrivingLicense":"2yr",
-		"Transmission":"manual"
+		{
+    		"id":"7",
+    		"regNumber": "ABC129",    		
+			"brand": "Ford",
+			"name":"?",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "L",
+			"fuel": "diesel",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "7"
 		},
-		
-	"seat":{
-		"title":"seat",
-		"Passengers":"5",
-		"AirCondition":"yes",
-		"Doors":"5",
-		"MinimalAge":"21yr",
-		"DrivingLicense":"2yr",
-		"Transmission":"manual"
+		{
+    		"id":"8",
+    		"regNumber": "ABC130",    		
+			"brand": "Audi",
+			"name":"?",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "L",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "8"
+		},
+		{
+    		"id":"9",
+    		"regNumber": "ABC131",    		
+			"brand": "SAAB",
+			"name":"?",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "L",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "9"
+		},
+		{
+    		"id":"10",
+    		"regNumber": "ABC132",    		
+			"brand": "SEAT",
+			"name":"?",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"manuell",
+			"type": "XL",
+			"fuel": "Bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "10"
+		},
+		{
+    		"id":"11",
+    		"regNumber": "ABC133",    		
+			"brand": "SEAT",
+			"name":"?",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"automatisk",
+			"type": "XL",
+			"fuel": "Diesel",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "11"
+		},
+		{
+    		"id":"12",
+    		"regNumber": "ABC134",    		
+			"brand": "Tesla",
+			"name":"Model S",
+			"passengers":"5",
+			"airCondition":"Yes",
+			"doors":"5",
+			"minimalAge":"21",
+			"yearsWithDrivingLicense":"2",
+			"transmission":"automatisk",
+			"type": "XL",
+			"fuel": "El",
+			"mileage": "134324",
+			"status": "unavailable",
+			"lastInspectionMonth" : "12"
 		}
-	
-	
-	
-	
-	
-	
-	
-	
-	}
+	]
+}
