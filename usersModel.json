@@ -2,8 +2,10 @@
 	"users": [
 		{
 			"userId": "1",
-			"name": "admin",
-			"email": "user@asdfas.com",
+			"employeeNumber": "1",
+			"firstName": "John",
+			"lastName": "Doe",
+			"email": "admin@yourdomain.com",
 			"username": "admin",
 			"hashed_password": "admin",
 			"salt": "abc123",
@@ -11,8 +13,10 @@
 		},
 		{
 			"userId": "2",
-			"name": "user",
-			"email": "user@asdfas.com",
+			"employeeNumber": "125",
+			"firstName": "Lisa",
+			"lastName": "Simpson",
+			"email": "user@yourdomain.com",
 			"username": "user",
 			"hashed_password": "abc123",
 			"salt": "abc123",
