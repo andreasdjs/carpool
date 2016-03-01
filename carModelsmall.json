@@ -1,0 +1,148 @@
+{
+    "vehicles": [
+    	{
+    		"id":"1",
+    		"regNumber": "ABC123",
+			"brand": "Volvo",
+			"name":"V40",
+			"transmission":"manuell",
+			"type": "S",
+			"fuel": "diesel",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "1"
+		},
+		{
+    		"id":"2",
+    		"regNumber": "ABC124",
+			"brand": "Volvo",
+			"name":"C70",
+			"transmission":"manuell",
+			"type": "S",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "2"
+		},
+		{
+    		"id":"3",
+    		"regNumber": "ABC125",
+			"brand": "BMW",
+			"name":"Model1",
+			"transmission":"manuell",
+			"type": "S",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "3"
+		},
+		{
+    		"id":"4",
+    		"regNumber": "ABC126",
+			"brand": "Kia",
+			"name":"Model2",
+			"transmission":"manuell",
+			"type": "M",
+			"fuel": "diesel",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "4"
+		},
+		{
+    		"id":"5",
+    		"regNumber": "ABC127",
+			"brand": "Opel",
+			"name":"Model3",
+			"transmission":"manuell",
+			"type": "M",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "5"
+		},
+		{
+    		"id":"6",
+    		"regNumber": "ABC128",
+			"brand": "Opel",
+			"name":"Model5",
+			"transmission":"manuell",
+			"type": "M",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "6"
+		},
+		{
+    		"id":"7",
+    		"regNumber": "ABC129",
+			"brand": "Ford",
+			"name":"?",
+			"transmission":"manuell",
+			"type": "L",
+			"fuel": "diesel",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "7"
+		},
+		{
+    		"id":"8",
+    		"regNumber": "ABC130",
+			"brand": "Audi",
+			"name":"?",
+			"transmission":"manuell",
+			"type": "L",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "8"
+		},
+		{
+    		"id":"9",
+    		"regNumber": "ABC131",
+			"brand": "SAAB",
+			"name":"?",
+			"transmission":"manuell",
+			"type": "L",
+			"fuel": "bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "9"
+		},
+		{
+    		"id":"10",
+    		"regNumber": "ABC132",
+			"brand": "SEAT",
+			"name":"?",
+			"transmission":"manuell",
+			"type": "XL",
+			"fuel": "Bensin",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "10"
+		},
+		{
+    		"id":"11",
+    		"regNumber": "ABC133",
+			"brand": "SEAT",
+			"name":"?",
+			"transmission":"automatisk",
+			"type": "XL",
+			"fuel": "Diesel",
+			"mileage": "134324",
+			"status": "available",
+			"lastInspectionMonth" : "11"
+		},
+		{
+    		"id":"12",
+    		"regNumber": "ABC134",
+			"brand": "Tesla",
+			"name":"Model S",
+			"transmission":"automatisk",
+			"type": "XL",
+			"fuel": "El",
+			"mileage": "134324",
+			"status": "unavailable",
+			"lastInspectionMonth" : "12"
+		}
+	]
+}
