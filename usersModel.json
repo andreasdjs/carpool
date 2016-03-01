@@ -13,8 +13,19 @@
 		},
 		{
 			"userId": "2",
-			"employeeNumber": "125",
+			"employeeNumber": "124",
 			"firstName": "Lisa",
+			"lastName": "Simpson",
+			"email": "user@yourdomain.com",
+			"username": "user",
+			"hashed_password": "abc123",
+			"salt": "abc123",
+			"admin": "false"
+		},
+		{
+			"userId": "3",
+			"employeeNumber": "125",
+			"firstName": "Bart",
 			"lastName": "Simpson",
 			"email": "user@yourdomain.com",
 			"username": "user",

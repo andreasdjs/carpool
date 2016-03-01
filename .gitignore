@@ -26,6 +26,11 @@ build/Release
 # Dependency directory
 node_modules
 
+# Data files
+bookings.txt
+vehicles.txt
+users.txt
+
 # Optional npm cache directory
 .npm
 

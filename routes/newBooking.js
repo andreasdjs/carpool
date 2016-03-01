@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* 
+	Rendering the data form.
+*/
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Carpool' });
+  res.render('newBooking');
 });
 
 module.exports = router;

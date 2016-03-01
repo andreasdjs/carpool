@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  #add
+    form(method='POST', action='http://localhost:3000/sent')
+      h1 BOKA FORDON
+      | &#x9;
+      //div
+        input(type='text', name='title', placeholder='Namn')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='roastery', placeholder='Rosteri')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='country', placeholder='Land')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='producer', placeholder='Producent')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='brewingMethod', placeholder='Bryggmetod')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='about', placeholder='Beskrivning')
+      | &#x9;&#x9;
+      p
+        button.myButton Boka
+      if written
+        p#notification Bil bokad.

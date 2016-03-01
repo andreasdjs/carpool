@@ -1,5 +1,6 @@
 var expect = require('chai').expect;
 //var myFunction = require('../modules/modules').myFunction;
+var readModel = require('../modules/testModule').readModel;
 var myFunction = require('../modules/testModule').myFunction;
 // var getInfoLang = require('./async').getInfoLang;
 var sinon = require('sinon');
@@ -12,7 +13,7 @@ describe('Test of read JSON-file.', function() {
 
 // Test callback function
 
-/*
+
 	it('returns language', function(done) {
 		var ghLang = {
 			'language': 'GUGGE'
@@ -24,7 +25,7 @@ describe('Test of read JSON-file.', function() {
 			done();
 		});
 	});
-*/
+
 
 });
 

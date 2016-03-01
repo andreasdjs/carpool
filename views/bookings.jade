@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  //h1= title
+  #container
+    #productList
+      h1= title
+      ul
+        each val in bookings.bookings
+          p 
+            b Booking ID: #{val.bookingId} 
+            div Start date: #{val.startDate}
+            div End date: #{val.endDate} 
+            div Vehicle ID: #{val.vehicleId}

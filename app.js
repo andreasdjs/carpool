@@ -10,6 +10,8 @@ var carpool = require('./modules/carpool')
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var list = require('./routes/list');
+var bookings = require('./routes/bookings');
+var newBooking = require('./routes/newBooking');
 
 var app = express();
 
@@ -28,9 +30,53 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/list', list);
+app.use('/bookings', bookings);
+app.use('/newBooking', newBooking);
 
-// Read vehicles
-// carpool.readVehicles();
+
+// Initial Write of JSON-data
+carpool.initialWriteBookings();
+
+
+/* Recieve POST data */
+
+app.post('/sent', function(req, res) {
+    var name = req.body.name;
+
+    var writeNewObject = {
+          "bookingId": "5000",
+          "userId": "123",
+          "vehicleId": "1",
+          "startDate" : "2016-01-01",
+          "endDate": "2016-01-05"
+      };
+
+     carpool.writeNewBooking(writeNewObject);
+
+/*
+  function setNewMaxId() {
+    coffee.getMaxId(function(i){
+      var iString = toString(i);
+      var writeNewObject = {
+          "id": i,
+            "title": req.body.title,
+            "roastery" : req.body.roastery,
+            "country": req.body.country,
+            "producer": req.body.producer,
+            "brewingMethod": req.body.brewingMethod,
+            "about": req.body.about
+      };
+      carpool.writeNewBooking(writeNewObject);
+    });
+  }
+  setNewMaxId(); */
+
+  res.render('newBooking', {
+    written: 'Fordonet är bokat.'
+  });
+});
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
