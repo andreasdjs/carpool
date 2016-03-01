@@ -12,6 +12,7 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -32,10 +33,42 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
+app.use('/login', login);
 
 
 // Initial Write of JSON-data
 carpool.initialWriteBookings();
+
+
+/* Recieve login POST */
+
+app.post('/loginSent', function(req, res) {
+
+
+  document.cookie="username=admin";
+
+  console.log(req.body.username + " tried to login.")
+
+  /* Local Storage */
+
+  var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+
+  // Put the object into storage
+  localStorage.setItem('testObject', JSON.stringify(testObject));
+
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('testObject');
+
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+
+
+  res.render('index', {
+    written: 'User logged in.',
+    username: req.body.username
+  });
+});
+
 
 
 /* Recieve POST data */

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  #add
+    form(method='POST', action='http://localhost:3000/loginSent')
+      h1 LOGIN
+      | &#x9;
+      div
+        input(type='text', name='username', placeholder='Username')
+      | &#x9;&#x9;
+      div
+        input(type='password', name='password', placeholder='Password')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='country', placeholder='Land')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='producer', placeholder='Producent')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='brewingMethod', placeholder='Bryggmetod')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='about', placeholder='Beskrivning')
+      | &#x9;&#x9;
+      p
+        button.myButton Login
+      if written
+        p#notification Bil bokad.

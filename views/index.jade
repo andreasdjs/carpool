@@ -2,5 +2,7 @@ extends layout
 
 block content
   #container
-    h1= title
+    h1 CARPOOL
     p This is a group project to demo Node.js and practice agile methodologies.
+    if written
+      p#notification #{username} logged in.        
