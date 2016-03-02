@@ -45,6 +45,9 @@ carpool.initialWriteBookings();
 app.post('/loginSent', function(req, res) {
 
 
+  res.cookie('username', req.body.username);
+  console.log('cookie set:' + req.cookies.username);
+
   console.log(req.body.username + " tried to login.")
 
 
