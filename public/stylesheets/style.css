@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-html { 
-	height: 100%; 
+html {
+	height: 100%;
     min-height: 100%;
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, Calibri, sans-serif; 
+	font-family: "Helvetica Neue", Helvetica, Arial, Calibri, sans-serif;
 	font-size: 18px;
 	margin:0; /* Remove default margins */
 	height: 100%;
@@ -27,10 +27,10 @@ ul li {
 
 #description {
 	width:95%;
-	
+
 	height:200px;
 	}
-	
+
 #name {
 	background:white;
 	width:95%;
@@ -47,8 +47,8 @@ nav {
 }
 
 nav ul {
-	width: 100%; 
-	margin: 0; /* reset margins */ 
+	width: 100%;
+	margin: 0; /* reset margins */
 	padding: 0;
 	list-style-type: none; /* remove bullets */
 }
@@ -68,14 +68,14 @@ nav ul li a {
 	color: white;
 }
 
-nav ul li a:hover { 
+nav ul li a:hover {
 	color: #e0e0e0;
 }
 
 /* Inherit font size (from Mozilla Developer Network) */
 
 button, input, select, textarea {
-  font-family : inherit; 
+  font-family : inherit;
   font-size   : 100%;
   padding: 12px;
 }
@@ -96,7 +96,7 @@ input {
 
 /* Input focused with fat bottom border below */
 
-input:focus { 
+input:focus {
 	border-bottom: solid #10C010 4px;
 	margin-bottom: 0px;
 }
@@ -117,12 +117,12 @@ input:focus {
 	background-color:#71d685;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
-	border-radius:3px; 
+	border-radius:3px;
 	border:1px solid #5c9467;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	padding:16px 32px; 
+	padding:16px 32px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #387545;
 	width: 216px;
@@ -142,7 +142,7 @@ input:focus {
 	top:1px;
 }
 
-/* Product page */ 
+/* Product page */
 
 #product h1 {
  text-transform: uppercase;
@@ -153,30 +153,115 @@ input:focus {
   margin-top: 0px;
 }
 
-/* List products */
+/* List vehicles - list.jade (listVehicles)*/
+
+#listContainer {
+	margin-left:32px;
+	margin-top:16px;
+	width: 710px;
+}
 
 #productList h1 {
   text-transform: uppercase;
 }
 
-#productList ul li {
+#productList {
 	margin-bottom: 4px;
+
+}
+table {
+	border-collapse: collapse;
 }
 
-#productList ul li a {
-	color: black;
-	text-decoration: none;
-	border-bottom: solid black 1px;
+#productList td {
+	padding: 20px;
 }
 
-#productList ul li a:hover { 
-	color: #10C010;
-	text-decoration: none;	
-	border-bottom: solid #10C010 1px;
+tr:nth-child(even) {
+		background: #ededed;
+	}
+
+tr:nth-child(odd) {
+		background: #FFF;
+}
+#btnDelete {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+    background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+    background-color: #ededed;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#000;
+		font-size: 15px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+#btnAdd {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+    background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+    background-color: #ededed;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#000;
+    font-size:15px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+#btnAdd:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+    background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+    background-color:#dfdfdf;
 }
 
-p {
-	line-height: 25px; /* Higher line height for readability */
+#btnDelete:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+    background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+    background-color:#dfdfdf;
+}
+
+#btnAdd:active {
+    position:relative;
+    top:1px;
+}
+
+#btnDelete:active {
+    position:relative;
+    top:1px;
 }
 
 /* Notification shows and then fades out */
@@ -202,5 +287,3 @@ p {
 .user {
 	margin-bottom: 16px;
 }
-
-
