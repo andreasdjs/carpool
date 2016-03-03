@@ -2,19 +2,29 @@ extends layout
 
 block content
   //h1= title
-  #container
+  #listContainer
     #productList
       h1= title
-      ul
-        each val in vehicles.vehicles
-          p 
-            b #{val.brand} #{val.name}
-            div Bilstorlek: #{val.type}
-            div Registreringsnummer:  #{val.regNumber} 
-            div Växellåda: #{val.transmission}
-            div Drivmedel: #{val.fuel}
-            div (Miltal: #{val.mileage})
-            div (Tillgänglighet: #{val.status})
-            div (Sista månad för besiktning: #{val.lastInspectionMonth})
-          //li
-            a(href='product?id=#{val.id}') #{val.brand} - #{val.name}
+      table
+          thead
+              tr
+                  th P-plats
+                  th Reg nummer
+                  th Bilmärke
+                  th Modell
+                  th Storlek
+                  th Bränsle
+
+          tbody
+              each item, i in vehicles.vehicles
+                  tr
+                      td= item.id
+                      td= item.regNumber
+                      td= item.brand
+                      td= item.name
+                      td= item.type
+                      td= item.fuel
+                      td
+                        button(id='btnAdd',onClick='onAdd()')  Ändra
+                      td
+                        button(id='btnDelete',onClick='onDelete()')  Radera
