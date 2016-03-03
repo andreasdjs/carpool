@@ -2,17 +2,23 @@ extends layout
 
 block content
   //h1= title
-  #container
+  #listContainer
     #productList
       h1= title
-      ul
-        each val in users.users
-          .user 
-            div 
-              b Employee number: #{val.employeeNumber}
-            div Username: #{val.username}
-            div First name: #{val.firstName}
-            div Last name: #{val.lastName}
-            div E-mail: #{val.email}
-          //li
-            a(href='product?id=#{val.id}') #{val.brand} - #{val.name}
+      table
+          thead
+              tr
+                  th Anställningsnr
+                  th Användarnamn
+                  th Förnamn
+                  th Efternamn
+                  th Email
+
+          tbody
+              each item, i in users.users
+                  tr
+                      td= item.employeeNumber
+                      td= item.username
+                      td= item.firstName
+                      td= item.lastName
+                      td= item.email

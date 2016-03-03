@@ -2,13 +2,23 @@ extends layout
 
 block content
   //h1= title
-  #container
+  #listContainer
     #productList
       h1= title
-      ul
-        each val in bookings.bookings
-          p 
-            b Booking ID: #{val.bookingId} 
-            div Start date: #{val.startDate}
-            div End date: #{val.endDate} 
-            div Vehicle ID: #{val.vehicleId}
+      table
+          thead
+              tr
+                  th Bokningsnummer
+                  th Anställningsnr
+                  th Startdatum
+                  th Slutdatum
+                  th Bil id
+
+          tbody
+              each item, i in bookings.bookings
+                  tr
+                      td= item.bookingId
+                      td= item.userId
+                      td= item.startDate
+                      td= item.endDate
+                      td= item.vehicleId
