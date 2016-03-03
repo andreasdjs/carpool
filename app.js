@@ -60,16 +60,19 @@ app.post('/loginSent', function(req, res) {
 
 
 /* Recieve POST data */
+/* Move this to a routed page */
 
 app.post('/sent', function(req, res) {
     var name = req.body.name;
+    var vehicleId = req.body.vehicleId;
+    console.log("Vehicle ID: " + req.body.vehicleId);
 
     var writeNewObject = {
-          "bookingId": "5000",
+          "bookingId": "7000",
           "userId": "123",
-          "vehicleId": "1",
-          "startDate" : "2016-01-01",
-          "endDate": "2016-01-05"
+          "vehicleId": req.body.vehicleId,
+          "startDate" : req.body.startDate,
+          "endDate": req.body.endDate
       };
 
      carpool.writeNewBooking(writeNewObject);

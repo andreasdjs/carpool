@@ -5,6 +5,19 @@ block content
     form(method='POST', action='http://localhost:3000/sent')
       h1 BOKA FORDON
       | &#x9;
+      |     
+      div
+        label(for='startDate') 
+        b Startdatum
+      |   
+      input(type='date', name='startDate', min='2016-03-03')
+      |     
+      div 
+        label(for='endDate')
+          b Slutdatum
+      input(type='date', name='endDate', min='2016-03-03')
+      div
+        input(type='text', name='vehicleId', placeholder='vehicleId')
       //div
         input(type='text', name='title', placeholder='Namn')
       | &#x9;&#x9;
