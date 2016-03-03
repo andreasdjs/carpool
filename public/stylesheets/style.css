@@ -177,6 +177,10 @@ table {
 	padding: 20px;
 }
 
+#productList th {
+	padding-right: 10px;
+}
+
 tr:nth-child(even) {
 		background: #ededed;
 	}
@@ -263,6 +267,7 @@ tr:nth-child(odd) {
     position:relative;
     top:1px;
 }
+
 
 /* Notification shows and then fades out */
 
