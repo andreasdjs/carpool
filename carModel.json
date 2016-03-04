@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "vehicles": [
     	{
     		"id":"1",
@@ -16,6 +17,52 @@
 			"mileage": "134324",
 			"status": "available",
 			"lastInspectionMonth" : "1"
+=======
+	"volvo":{
+		"carname":"volvo",
+		
+		"bil1":{
+			"Name":"volvo v40",
+			"Regnummer":"uge678",
+			"Typ":"",
+			"Drivmedel":"disel",
+			"Kontrollbesikting":"",
+			"Service":"",
+			"Status":"Bokad",
+			"Passengers":"5",
+			"AirCondition":"yes",
+			"Doors":"5",
+			"MinimalAge":"21yr",
+			"DrivingLicense":"2 yrs min",
+			"Transmission":"manual"
+				},
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		
+		"bil2":{
+			"name":"volvo c70",
+			"Passengers":"2",
+			"AirCondition":"yes",
+			"Doors":"3",
+			"MinimalAge":"25yr",
+			"DrivingLicense":"5yr",
+			"Transmission":"manual"
+				}
+		
+		
+		
+		
+>>>>>>> 6c9a38c224441993330df085eb0af7c47f79c4ba
 		},
 		{
     		"id":"2",

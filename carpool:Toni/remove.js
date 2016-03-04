@@ -27,7 +27,7 @@ app.post('/', function(req, res) {
 	
 	var gugge = req.body.id;
 	console.log("post request: " + req.body.id);
-	var stream = fs.createReadStream('carModel.json');
+	var stream = fs.createReadStream('carM.json');
 	var data='';
 	
 	
@@ -54,7 +54,7 @@ app.post('/', function(req, res) {
 				
 
 				
-				fs.writeFile('carModel.json',obj);
+				fs.writeFile('carM.json',obj);
 			});// end stream end
 		
 	});// end app.post

@@ -26,7 +26,7 @@ app.get('/',function(req,res){
 	
 app.post('/',function(req,res){
 	var gugge = req.body;
-	var AddCarStream = fs.createReadStream('carModel.json');
+	var AddCarStream = fs.createReadStream('carM.json');
 	var data = '';
 	
 	AddCarStream.on('data',function(chunk){
@@ -39,7 +39,7 @@ app.post('/',function(req,res){
 		res.send(obj);
 		
 		var addCar = JSON.stringify(obj);
-		fs.writeFile('carModel.json',addCar);
+		fs.writeFile('carM.json',addCar);
 		
 		}); // end RemoveCarStream end
 	
