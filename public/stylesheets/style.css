@@ -173,12 +173,16 @@ table {
 	border-collapse: collapse;
 }
 
-#productList td {
-	padding: 20px;
+#productList td, th {
+	padding: 16px;
+	white-space: nowrap;
 }
 
 #productList th {
-	padding-right: 10px;
+	background: #dddddd;
+	padding-left:10px;
+	padding-right:10px;
+	white-space: nowrap;
 }
 
 tr:nth-child(even) {
@@ -186,7 +190,7 @@ tr:nth-child(even) {
 	}
 
 tr:nth-child(odd) {
-		background: #FFF;
+		background: #fafafa;
 }
 #btnDelete {
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
