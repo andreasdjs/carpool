@@ -12,6 +12,7 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
+var adminNewBooking = require('./routes/adminNewBooking');
 // var availableVehicles = require('./routes/availableVehicles');
 var login = require('./routes/login');
 
@@ -34,6 +35,7 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
+app.use('/AdminNewBooking', adminNewBooking);
 // app.use('/availableVehicles', availableVehicles);
 app.use('/login', login);
 
@@ -52,11 +54,22 @@ app.post('/loginSent', function(req, res) {
 
   console.log(req.body.username + " tried to login.")
 
+  if (req.body.username === "admin") {
 
   res.render('index', {
     written: 'User logged in.',
     username: req.body.username
   });
+
+  } else {
+  res.render('newBooking', {
+    written: 'User logged in.',
+    username: req.body.username
+  });
+
+  }
+
+
 });
 
 

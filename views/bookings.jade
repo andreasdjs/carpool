@@ -5,6 +5,10 @@ block content
   #listContainer
     #productList
       h1= title
+      - if (username === 'admin')
+        p hej
+      - else 
+        p svejs
       table
           thead
               tr

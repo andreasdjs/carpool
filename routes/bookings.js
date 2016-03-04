@@ -24,12 +24,14 @@ router.get('/', function(req, res, next) {
 
 	carpool.readBookings(pushContent);
 
+    console.log('Booking list as: ' + req.cookies.username);
 
     function pushContent(obj){
 
     	console.log('object from readBookings:\n\n' + obj);
 
     	res.render('bookings', {
+          username: req.cookies.username,
         	title: 'Bookings',
         	bookings: obj
     	});
