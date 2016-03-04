@@ -96,8 +96,32 @@ function writeNewBooking(newEntryObject) {
   });
 }
 
+function checkDates (checkStartDate, checkEndDate) {
+
+  var startDate = new Date('06/06/2016');
+  var endDate = new Date('06/25/2016');
+
+  console.log(startDate);
+  console.log(endDate);
+
+  console.log(checkStartDate);
+  console.log(checkEndDate);
+
+  if ((checkStartDate >= startDate && checkStartDate <= endDate) ||
+         (startDate >= checkStartDate && startDate <= checkEndDate)) {
+    console.log('Upptaget!');
+  } else {
+    console.log('Ledigt!');
+  }
+
+}
+
+
 module.exports.writeNewBooking = writeNewBooking;
 module.exports.initialWriteBookings = initialWriteBookings;
 module.exports.readBookings = readBookings;
 module.exports.readVehicles = readVehicles;
 module.exports.readUsers = readUsers;
+module.exports.checkDates = checkDates;
+
+
