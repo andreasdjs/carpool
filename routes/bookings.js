@@ -4,6 +4,7 @@ var router = express.Router();
 var fs = require('fs');
 var carpool = require('../modules/carpool');
 
+/* ??????
 var booking = {
           "bookingId": "1000",
           "userId": "123",
@@ -14,6 +15,7 @@ var booking = {
 
 carpool.writeNewBooking(booking);
 
+*/
 
 router.get('/', function(req, res, next) {
 
@@ -28,7 +30,7 @@ router.get('/', function(req, res, next) {
 
     function pushContent(obj){
 
-    	console.log('object from readBookings:\n\n' + obj);
+    	console.log('object from readBookings:\n\n' + JSON.stringify(obj));
 
     	res.render('bookings', {
           username: req.cookies.username,

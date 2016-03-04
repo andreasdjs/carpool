@@ -56,10 +56,10 @@ function initialWriteBookings() {
   });
 
   fileReadStream.on('end', () => {
- 	fs.writeFile('bookings.txt', data, (err) => {
-	  if (err) throw err;
-	  console.log('New fresh JSON bookings data file written.');
-	}); 
+   	fs.writeFile('bookings.txt', data, (err) => {
+  	  if (err) throw err;
+  	  console.log('New fresh JSON bookings data file written.');
+  	}); 
   });
 }
 
@@ -76,22 +76,24 @@ function writeNewBooking(newEntryObject) {
 
   	var obj = JSON.parse(data);
 
+    /*
   	console.log('data: \n\n' + data);
   	console.log('obj: \n\n' + obj);
   	console.log('newEntryObject: \n\n' + newEntryObject);
+    */
 
-	// Pushing new object to last position in product array
-	obj.bookings.push(newEntryObject);
+  	// Pushing new object to last position in product array
+  	obj.bookings.push(newEntryObject);
 
-	console.log("Bookings including new object: " + JSON.stringify(obj));
-	// Converting to text
-	var write = JSON.stringify(obj);
+  	//console.log("Bookings including new object: " + JSON.stringify(obj));
+  	// Converting to text
+  	var write = JSON.stringify(obj);
 
-	// Writing to disk
-	fs.writeFile('bookings.txt', write, (err) => {
-	  if (err) throw err;
-	  console.log('New bookings data file written including new object!');
-	}); 
+  	// Writing to disk
+  	fs.writeFile('bookings.txt', write, (err) => {
+  	  if (err) throw err;
+  	  console.log('Why...New bookings data file written including new object!');
+  	}); 
 
   });
 }
@@ -161,13 +163,15 @@ function checkBookings(callback) {
 
 }
 
-
-module.exports.writeNewBooking = writeNewBooking;
 module.exports.initialWriteBookings = initialWriteBookings;
+module.exports.writeNewBooking = writeNewBooking;
+
 module.exports.readBookings = readBookings;
 module.exports.readVehicles = readVehicles;
 module.exports.readUsers = readUsers;
+
 module.exports.checkDates = checkDates;
 module.exports.checkBookings = checkBookings;
+
 
 
