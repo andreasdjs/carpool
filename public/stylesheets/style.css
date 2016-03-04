@@ -171,6 +171,12 @@ input:focus {
 }
 table {
 	border-collapse: collapse;
+/* Drop shadow for luxury, but tend to distract. */	
+/*	-webkit-box-shadow: 0px 5px 19px 0px rgba(156,156,156,0.15);
+	-moz-box-shadow: 0px 5px 19px 0px rgba(156,156,156,0.15);
+	box-shadow: 0px 5px 19px 0px rgba(156,156,156,0.15); */
+	/* Margin to leave some space to the bottom of the page */
+	margin-bottom:32px;
 }
 
 #productList td, th {
