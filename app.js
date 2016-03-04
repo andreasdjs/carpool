@@ -12,6 +12,7 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
+// var availableVehicles = require('./routes/availableVehicles');
 var login = require('./routes/login');
 
 var app = express();
@@ -33,6 +34,7 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
+// app.use('/availableVehicles', availableVehicles);
 app.use('/login', login);
 
 
@@ -98,6 +100,28 @@ app.post('/sent', function(req, res) {
   res.render('newBooking', {
     written: 'Fordonet är bokat.'
   });
+});
+
+
+/* Recieve POST data from select date form*/
+
+app.post('/getVehicles', function(req, res) {
+
+  /* Replace with code that singles out non booked vehicles */
+
+  carpool.readVehicles(pushContent);
+
+  function pushContent(obj){
+
+    console.log('object from readVehicles:\n\n' + obj);
+
+    res.render('availableVehicles', {
+        title: 'Tillgängliga fordon',
+        vehicles: obj
+    });
+
+  }
+
 });
 
 

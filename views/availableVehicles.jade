@@ -1,0 +1,28 @@
+extends userLayout
+
+block content
+  //h1= title
+  #listContainer
+    #productList
+      h1= title
+      table
+          thead
+              tr
+                  th ID
+                  th Reg nummer
+                  th Bilmärke
+                  th Modell
+                  th Storlek
+                  th Bränsle
+                  th
+          tbody
+              each item, i in vehicles.vehicles
+                  tr
+                      td= item.id
+                      td= item.regNumber
+                      td= item.brand
+                      td= item.name
+                      td= item.type
+                      td= item.fuel
+                      td
+                        button(id='btnAdd',onClick='onAdd()')  Boka
