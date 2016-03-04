@@ -13,18 +13,17 @@ router.get('/', function(req, res, next) {
 
 	carpool.readVehicles(pushContent);
 
+  function pushContent(obj){
 
+  	console.log('object from readVehicles:\n\n' + obj);
 
-    function pushContent(obj){
+  	res.render('list', {
+      	title: 'Vehicles',
+      	vehicles: obj
+  	});
 
-    	console.log('object from readVehicles:\n\n' + obj);
+	}
 
-    	res.render('list', {
-        	title: 'Vehicles',
-        	vehicles: obj
-    	});
-
-  	}
 });
 
 module.exports = router;
