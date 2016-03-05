@@ -4,19 +4,6 @@ var router = express.Router();
 var fs = require('fs');
 var carpool = require('../modules/carpool');
 
-/* ??????
-var booking = {
-          "bookingId": "1000",
-          "userId": "123",
-          "vehicleId": "1",
-          "startDate" : "2016-01-01",
-          "endDate": "2016-01-05"
-      };
-
-carpool.writeNewBooking(booking);
-
-*/
-
 router.get('/', function(req, res, next) {
 
 /* 
