@@ -2,7 +2,8 @@ extends layout
 
 block content
   #add
-    form(method='POST', action='/getVehicles')
+    //form(method='POST', action='/getVehicles')
+    form(method='POST', action='/sent')
       h1 BOKA FORDON
       | &#x9;
       |     
@@ -38,5 +39,5 @@ block content
       | &#x9;&#x9;
       p
         button.myButton Visa fordon
-      if written
+      //if written
         p#notification Bil bokad.

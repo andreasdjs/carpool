@@ -302,3 +302,5 @@ tr:nth-child(odd) {
 .user {
 	margin-bottom: 16px;
 }
+
+p.read { width: 540px; }

@@ -12,7 +12,7 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
-var adminNewBooking = require('./routes/adminNewBooking');
+// var adminNewBooking = require('./routes/adminNewBooking');
 // var availableVehicles = require('./routes/availableVehicles');
 var login = require('./routes/login');
 
@@ -35,7 +35,7 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
-app.use('/AdminNewBooking', adminNewBooking);
+// app.use('/adminNewBooking', adminNewBooking);
 // app.use('/availableVehicles', availableVehicles);
 app.use('/login', login);
 
@@ -110,9 +110,21 @@ app.post('/sent', function(req, res) {
   }
   setNewMaxId(); */
 
+/*
   res.render('newBooking', {
     written: 'Fordonet är bokat.'
   });
+*/
+
+  res.render('orderConfirmation', {
+    vehicleId: req.body.vehicleId,
+    startDate : req.body.startDate,
+    endDate: req.body.endDate,
+    username: req.cookies.username,
+    written: 'Fordonet är bokat.'
+  });
+
+
 });
 
 
@@ -132,7 +144,7 @@ app.post('/getVehicles', function(req, res) {
 //    console.log('object from readVehicles:\n\n' + JSON.stringify(obj));
 
     res.render('availableVehicles', {
-        title: 'Tillgängliga fordon',
+        title: 'Tillgängliga fordon (2/3)',
         startDate: req.body.startDate,
         endDate: req.body.endDate,
         vehicles: obj

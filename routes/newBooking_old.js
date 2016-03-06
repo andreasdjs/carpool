@@ -6,16 +6,8 @@ var router = express.Router();
 */
 
 router.get('/', function(req, res, next) {
-
   console.log('Booking as: ' + req.cookies.username);
-
-//  res.render('adminNewBooking');
-
-	res.render('adminNewBooking', {
-    	title: 'Boka fordon',
-        username: req.cookies.username
-	});
-
+  res.render('newBooking');
 });
 
 module.exports = router;
