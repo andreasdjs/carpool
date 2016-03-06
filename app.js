@@ -12,7 +12,6 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
-// var adminNewBooking = require('./routes/adminNewBooking');
 // var availableVehicles = require('./routes/availableVehicles');
 var login = require('./routes/login');
 
@@ -35,12 +34,12 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
-// app.use('/adminNewBooking', adminNewBooking);
 // app.use('/availableVehicles', availableVehicles);
 app.use('/login', login);
 
 
-// Initial Write of JSON-data
+/* Initial Write of JSON-data */
+
 carpool.initialWriteBookings();
 
 
@@ -48,34 +47,25 @@ carpool.initialWriteBookings();
 
 app.post('/loginSent', function(req, res) {
 
-
   res.cookie('username', req.body.username);
   console.log('cookie set:' + req.cookies.username);
-
   console.log(req.body.username + " tried to login.")
 
   if (req.body.username === "admin") {
-
-  res.render('index', {
-    written: 'User logged in.',
-    username: req.body.username
-  });
-
+    res.render('index', {
+      written: 'User logged in.',
+      username: req.body.username
+    });
   } else {
-  res.render('newBooking', {
-    written: 'User logged in.',
-    username: req.body.username
-  });
-
+    res.render('newBooking', {
+      written: 'User logged in.',
+      username: req.body.username
+    });
   }
-
 
 });
 
-
-
-/* Recieve POST data */
-/* Move this to a routed page */
+/* Recieve POST data & write new booking */
 
 app.post('/sent', function(req, res) {
     var name = req.body.name;
@@ -83,14 +73,14 @@ app.post('/sent', function(req, res) {
     console.log("Vehicle ID: " + req.body.vehicleId);
 
     var writeNewObject = {
-          "bookingId": "7000",
-          "userId": "123",
-          "vehicleId": req.body.vehicleId,
-          "startDate" : req.body.startDate,
-          "endDate": req.body.endDate
-      };
+      "bookingId": "7000",
+      "userId": "123",
+      "vehicleId": req.body.vehicleId,
+      "startDate" : req.body.startDate,
+      "endDate": req.body.endDate
+    };
 
-     carpool.writeNewBooking(writeNewObject);
+    carpool.writeNewBooking(writeNewObject);
 
 /*
   function setNewMaxId() {
@@ -116,6 +106,8 @@ app.post('/sent', function(req, res) {
   });
 */
 
+  // Response with order confirmation
+
   res.render('orderConfirmation', {
     vehicleId: req.body.vehicleId,
     startDate : req.body.startDate,
@@ -123,7 +115,6 @@ app.post('/sent', function(req, res) {
     username: req.cookies.username,
     written: 'Fordonet är bokat.'
   });
-
 
 });
 
@@ -141,7 +132,8 @@ app.post('/getVehicles', function(req, res) {
 
   function pushContent(obj){
 
-//    console.log('object from readVehicles:\n\n' + JSON.stringify(obj));
+    //console.log('object from readVehicles:\n\n' + JSON.stringify(obj));
+    // Response with a list of available vehicles 
 
     res.render('availableVehicles', {
         title: 'Tillgängliga fordon (2/3)',

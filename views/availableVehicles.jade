@@ -7,8 +7,8 @@ block content
       h1= title
       p #{startDate} #{endDate} hej hej hej nej
       form(method='POST', action='/sent')
-        input(type='hidden', name='startDate', value='2017-01-01')
-        input(type='hidden', name='endDate', value='2017-01-02')
+        input(type='hidden', name='startDate', value='#{startDate}')
+        input(type='hidden', name='endDate', value='#{endDate}')
         table
           thead
             tr
