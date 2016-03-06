@@ -5,5 +5,8 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
   body
-    include ./includes/nav.jade  
+    - if (username === 'admin')
+      include ./includes/nav.jade  
+    - else 
+      include ./includes/userNav.jade  
     block content

@@ -5,24 +5,28 @@ block content
   #listContainer
     #productList
       h1= title
-      table
+      p #{startDate} #{endDate} hej hej hej nej
+      form(method='POST', action='/sent')
+        input(type='hidden', name='startDate', value='2017-01-01')
+        input(type='hidden', name='endDate', value='2017-01-02')
+        table
           thead
-              tr
-                  th ID
-                  th Reg nummer
-                  th Bilmärke
-                  th Modell
-                  th Storlek
-                  th Bränsle
-                  th
+            tr
+              th ID
+              th Reg nummer
+              th Bilmärke
+              th Modell
+              th Storlek
+              th Bränsle
+              th
           tbody
-              each item, i in vehicles.vehicles
-                  tr
-                      td= item.id
-                      td= item.regNumber
-                      td= item.brand
-                      td= item.name
-                      td= item.type
-                      td= item.fuel
-                      td
-                        button(id='btnAdd',onClick='onAdd()')  Boka
+            each item, i in vehicles.vehicles
+              tr
+                td= item.id
+                td= item.regNumber
+                td= item.brand
+                td= item.name
+                td= item.type
+                td= item.fuel
+                td
+                  button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Boka

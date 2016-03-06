@@ -122,14 +122,19 @@ app.post('/getVehicles', function(req, res) {
 
   /* Replace with code that singles out non booked vehicles */
 
+  console.log("Start date: " + req.body.startDate);
+  console.log("End date: " + req.body.endDate);
+
   carpool.readVehicles(pushContent);
 
   function pushContent(obj){
 
-    console.log('object from readVehicles:\n\n' + obj);
+//    console.log('object from readVehicles:\n\n' + JSON.stringify(obj));
 
     res.render('availableVehicles', {
         title: 'Tillgängliga fordon',
+        startDate: req.body.startDate,
+        endDate: req.body.endDate,
         vehicles: obj
     });
 
