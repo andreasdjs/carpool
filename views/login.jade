@@ -4,6 +4,9 @@ block content
   #add
     form(method='POST', action='http://localhost:3000/loginSent')
       h1 LOGIN
+      p
+        b hint: 
+        | admin for admin, anything else for other users.
       | &#x9;
       div
         input(type='text', name='username', placeholder='Username')

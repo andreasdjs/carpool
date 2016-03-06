@@ -1,14 +1,9 @@
 extends layout
 
 block content
-  //h1= title
   #listContainer
     #productList
       h1= title
-      - if (username === 'admin')
-        p #{username} is logged in
-      - else 
-        p user 
       table
         thead
           tr

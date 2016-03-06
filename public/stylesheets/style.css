@@ -304,3 +304,9 @@ tr:nth-child(odd) {
 }
 
 p.read { width: 540px; }
+
+tr.alert { 
+	background-color: #f53030; 
+	color: white;
+}
+/*tr.alert td { background-color: red; }*/
