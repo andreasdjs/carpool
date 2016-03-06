@@ -163,6 +163,30 @@ function checkBookings(callback) {
 
 }
 
+function newTime() {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0!
+  var yyyy = today.getFullYear();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+
+  if(dd<10) {
+      dd='0'+dd
+  } 
+
+  if(mm<10) {
+      mm='0'+mm
+  }
+
+  today = yyyy+'-'+mm+'-'+dd;
+
+  console.log("Time: " + today);
+
+  return today;
+}
+
 module.exports.initialWriteBookings = initialWriteBookings;
 module.exports.writeNewBooking = writeNewBooking;
 
@@ -173,5 +197,6 @@ module.exports.readUsers = readUsers;
 module.exports.checkDates = checkDates;
 module.exports.checkBookings = checkBookings;
 
+module.exports.newTime = newTime;
 
 
