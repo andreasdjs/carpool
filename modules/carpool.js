@@ -156,12 +156,71 @@ function checkBookings(callback) {
       }
 
     });
-
-    callback(obj); // Send object back
+    
+    callback(obj); // Send object back with bookings
 
   });
 
 }
+
+/* Testing with three parameters */
+
+function checkBookingsByDate(callback, start, end) {
+
+  console.log("\nCheck dates:\n")
+  console.log("Start: " + start);
+  console.log("End: " + end + "\n");
+
+  var checkStartDate = new Date(start);
+  var checkEndDate = new Date(end);
+
+  var fileReadStream = fs.createReadStream('bookings.txt');
+  var data = "";
+
+  fileReadStream.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  fileReadStream.on('end', () => {
+    var obj = JSON.parse(data);
+ 
+    /* Check each dates for any booking that date */
+
+    var clashingVehicles = [];
+    
+    obj.bookings.forEach(function(element) { 
+
+      console.log("Start: " + element.startDate + " End: " + element.endDate); // 
+
+      var sd = new Date(element.startDate);
+      var ed = new Date(element.endDate);
+
+      if ((checkStartDate >= sd && checkStartDate <= ed) ||
+             (sd >= checkStartDate && sd <= checkEndDate)) {
+
+        console.log('Upptaget!');
+        console.log("Vehicle clashing: " + element.vehicleId);
+        // do something
+        clashingVehicles.push(element.vehicleId);
+
+      } else {
+
+        console.log('Ledigt!');
+
+      }
+
+    });
+    
+    // Should send back vehicleId clashing 
+//    console.log(clashingVehicles);
+    callback(clashingVehicles);
+//    callback(obj); // Send object back with bookings
+
+  });
+
+}
+
+/* Get todays date in EU format */
 
 function newTime() {
   var today = new Date();
@@ -196,6 +255,7 @@ module.exports.readUsers = readUsers;
 
 module.exports.checkDates = checkDates;
 module.exports.checkBookings = checkBookings;
+module.exports.checkBookingsByDate = checkBookingsByDate;
 
 module.exports.newTime = newTime;
 
