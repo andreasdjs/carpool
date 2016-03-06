@@ -10,12 +10,12 @@ block content
         label(for='startDate') 
         b Startdatum
       |   
-      input(type='date', name='startDate', min='#{today}')
+      input(type='date', name='startDate', min='#{today}', required='')
       |     
       div 
         label(for='endDate')
           b Slutdatum
-      input(type='date', name='endDate', min='2016-03-03')
+      input(type='date', name='endDate', min='#{today}', required='')
       //div
         input(type='text', name='vehicleId', placeholder='vehicleId')
       //div
