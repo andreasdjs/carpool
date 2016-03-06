@@ -1,4 +1,4 @@
-extends userLayout
+extends layout
 
 block content
   //h1= title
@@ -6,23 +6,22 @@ block content
     #productList
       h1= title
       - if (username === 'admin')
-        p admin is logged in
+        p #{username} is logged in
       - else 
         p user 
       table
-          thead
-              tr
-                  th Bokningsnummer
-                  th Anställningsnr
-                  th Startdatum
-                  th Slutdatum
-                  th Bil id
-
+        thead
+          tr
+            th Bokningsnummer
+            th Anställningsnr
+            th Startdatum
+            th Slutdatum
+            th Bil id
           tbody
-              each item, i in bookings.bookings
-                  tr
-                      td= item.bookingId
-                      td= item.userId
-                      td= item.startDate
-                      td= item.endDate
-                      td= item.vehicleId
+            each item, i in bookings.bookings
+              tr
+                td= item.bookingId
+                td= item.userId
+                td= item.startDate
+                td= item.endDate
+                td= item.vehicleId

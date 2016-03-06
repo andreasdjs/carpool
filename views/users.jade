@@ -5,20 +5,20 @@ block content
   #listContainer
     #productList
       h1= title
+      p #{username} is logged in.
       table
-          thead
-              tr
-                  th Anställningsnr
-                  th Användarnamn
-                  th Förnamn
-                  th Efternamn
-                  th E-post
-
+        thead
+          tr
+            th Anställningsnr
+            th Användarnamn
+            th Förnamn
+            th Efternamn
+            th E-post
           tbody
-              each item, i in users.users
-                  tr
-                      td= item.employeeNumber
-                      td= item.username
-                      td= item.firstName
-                      td= item.lastName
-                      td= item.email
+            each item, i in users.users
+              tr
+                td= item.employeeNumber
+                td= item.username
+                td= item.firstName
+                td= item.lastName
+                td= item.email

@@ -24,6 +24,7 @@ router.get('/', function(req, res, next) {
   	res.render('list', {
       	title: 'Vehicles',
         thisMonth: thisMonth,
+        username: req.cookies.username,
       	vehicles: obj
   	});
 

@@ -13,6 +13,7 @@ router.get('/', function(req, res, next) {
 
 	carpool.readUsers(pushContent);
 
+    console.log('username cookie: ' + req.cookies.username);
 
     function pushContent(obj){
 
@@ -20,6 +21,7 @@ router.get('/', function(req, res, next) {
 
     	res.render('users', {
         	title: 'Users',
+          username: req.cookies.username,
         	users: obj
     	});
 

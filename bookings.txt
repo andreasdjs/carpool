@@ -1,1 +1,46 @@
-{"bookings":[{"bookingId":"1","userId":"123","vehicleId":"1","startDate":"2016-01-01","endDate":"2016-01-05"},{"bookingId":"2","userId":"123","vehicleId":"1","startDate":"2016-02-01","endDate":"2016-02-05"},{"bookingId":"3","userId":"123","vehicleId":"1","startDate":"2016-03-01","endDate":"2016-03-05"},{"bookingId":"4","userId":"123","vehicleId":"1","startDate":"2016-04-01","endDate":"2016-04-05"},{"bookingId":"5","userId":"123","vehicleId":"1","startDate":"2016-05-01","endDate":"2016-05-05"},{"bookingId":"6","userId":"123","vehicleId":"2","startDate":"2016-05-01","endDate":"2016-05-05"},{"bookingId":"7000","userId":"123"},{"bookingId":"7000","userId":"123"},{"bookingId":"7000","userId":"123","startDate":"2017-01-01","endDate":"2017-01-02"},{"bookingId":"7000","userId":"123","vehicleId":"4000","startDate":"2017-01-01","endDate":"2017-01-02"},{"bookingId":"7000","userId":"123","startDate":"2016-03-30","endDate":"2016-03-31"},{"bookingId":"7000","userId":"123","vehicleId":"1","startDate":"2017-01-01","endDate":"2017-01-02"},{"bookingId":"7000","userId":"123","vehicleId":"77","startDate":"2017-01-01","endDate":"2017-01-02"},{"bookingId":"7000","userId":"123","vehicleId":"23","startDate":"2017-01-01","endDate":"2017-01-02"}]}
+{
+    "bookings": [
+	    {
+	    	"bookingId": "1",
+	        "userId": "123",
+	        "vehicleId": "1",
+	        "startDate" : "2016-01-01",
+	        "endDate": "2016-01-05"
+	    },
+	    {
+	    	"bookingId": "2",
+	        "userId": "123",
+	        "vehicleId": "1",
+	        "startDate" : "2016-02-01",
+	        "endDate": "2016-02-05"
+	    },
+	    {
+	    	"bookingId": "3",
+	        "userId": "123",
+	        "vehicleId": "1",
+	        "startDate" : "2016-03-01",
+	        "endDate": "2016-03-05"
+	    },
+	    {
+	    	"bookingId": "4",
+	        "userId": "123",
+	        "vehicleId": "1",
+	        "startDate" : "2016-04-01",
+	        "endDate": "2016-04-05"
+	    },
+	    {
+	    	"bookingId": "5",
+	        "userId": "123",
+	        "vehicleId": "1",
+	        "startDate" : "2016-05-01",
+	        "endDate": "2016-05-05"
+	    },
+	    {
+	    	"bookingId": "6",
+	        "userId": "123",
+	        "vehicleId": "2",
+	        "startDate" : "2016-05-01",
+	        "endDate": "2016-05-05"
+	    }	    
+    ]
+}
