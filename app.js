@@ -119,6 +119,85 @@ app.post('/sent', function(req, res) {
 });
 
 
+
+/* Recieve POST data & write new booking */
+
+app.post('/editVehicle', function(req, res) {
+//    var name = req.body.name;
+    var vehicleId = req.body.vehicleId;
+    console.log("Vehicle ID from editVehicle: " + req.body.vehicleId);
+
+/*    var writeNewObject = {
+      "bookingId": "7000",
+      "userId": "123",
+      "vehicleId": req.body.vehicleId,
+      "startDate" : req.body.startDate,
+      "endDate": req.body.endDate
+    };*/
+
+//    carpool.writeNewBooking(writeNewObject);
+
+/*
+  function setNewMaxId() {
+    coffee.getMaxId(function(i){
+      var iString = toString(i);
+      var writeNewObject = {
+          "id": i,
+            "title": req.body.title,
+            "roastery" : req.body.roastery,
+            "country": req.body.country,
+            "producer": req.body.producer,
+            "brewingMethod": req.body.brewingMethod,
+            "about": req.body.about
+      };
+      carpool.writeNewBooking(writeNewObject);
+    });
+  }
+  setNewMaxId(); */
+
+/*
+  res.render('newBooking', {
+    written: 'Fordonet är bokat.'
+  });
+*/
+
+
+  carpool.readVehicles(pushContent);
+
+  function pushContent(obj){
+
+  
+
+    //console.log('object from readVehicles:\n\n' + JSON.stringify(obj));
+    // Response with a list of available vehicles 
+
+/*
+    res.render('availableVehicles', {
+        title: 'Tillgängliga fordon (2/3)',
+        startDate: req.body.startDate,
+        endDate: req.body.endDate,
+        vehicles: obj
+    });
+*/
+
+
+    // Response with order confirmation
+
+    res.render('editVehicle', {
+      vehicleId: req.body.vehicleId,
+      startDate : req.body.startDate,
+      endDate: req.body.endDate,
+      username: req.cookies.username,
+      vehicles: obj
+    });
+
+
+  }
+
+
+});
+
+
 /* Recieve POST data from select date form*/
 
 app.post('/getVehicles', function(req, res) {
@@ -128,24 +207,99 @@ app.post('/getVehicles', function(req, res) {
   console.log("Start date: " + req.body.startDate);
   console.log("End date: " + req.body.endDate);
 
+
+
   carpool.readVehicles(pushContent);
 
-  function pushContent(obj){
+  function pushContent(obj){     
+/*
+    var start = "2016-01-01";
+    var end = "2016-03-05";
+*/
+    var start = req.body.startDate;
+    var end = req.body.endDate;
 
-    //console.log('object from readVehicles:\n\n' + JSON.stringify(obj));
-    // Response with a list of available vehicles 
 
-    res.render('availableVehicles', {
-        title: 'Tillgängliga fordon (2/3)',
-        startDate: req.body.startDate,
-        endDate: req.body.endDate,
-        vehicles: obj
-    });
+    carpool.checkBookingsByDate(pushBookings, start, end);
+
+    function pushBookings(clashingVehicles){
+      console.log('\nClashing vehicles: ' + clashingVehicles);
+
+/*
+        var filtered_obj = obj.filter(function(value){
+          return value.id !== "1";
+        });
+*/
+       if (clashingVehicles.length !== 0) {
+           
+           console.log("Handle clashes.");
+/*
+for (i = 0; i < cars.length; i++) { 
+    text += cars[i] + "<br>";
+}
+*/
+          for (i = 0; i < clashingVehicles.length; i++) {
+
+          obj.vehicles = obj.vehicles.filter(function (el) {
+            return el.id != clashingVehicles[i];
+          });
+
+          }
+
+/*          var newArray = obj.vehicles.filter(function (el) {
+            return el.id != clashingVehicles[0];
+          });
+*/
+
+/*
+          var newArray = obj.vehicles.filter(function (el) {
+            return el.id >= 12;
+          });
+*/
+
+          console.log(JSON.stringify(obj));
+
+       }
+
+      
+
+      res.render('availableVehicles', {
+          title: 'Tillgängliga fordon (2/3)',
+          startDate: req.body.startDate,
+          endDate: req.body.endDate,
+          vehicles: obj
+      });
+
+
+    }
+
+/*
+
+          res.render('availableVehicles', {
+              title: 'Tillgängliga fordon (2/3)',
+              startDate: req.body.startDate,
+              endDate: req.body.endDate,
+              vehicles: obj
+          });
+
+*/
 
   }
 
 });
 
+/*
+
+var start = "2016-01-01";
+var end = "2016-03-05";
+
+carpool.checkBookingsByDate(pushBookings, start, end);
+
+function pushBookings(clashingVehicles){
+  console.log('\nClashing vehicles: ' + clashingVehicles);
+}
+
+*/
 
 
 // catch 404 and forward to error handler

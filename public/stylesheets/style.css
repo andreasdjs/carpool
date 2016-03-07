@@ -82,7 +82,7 @@ button, input, select, textarea {
 
 /* add form */
 
-#add {
+#add, #edit {
 	padding-left: 32px;
 }
 

@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  #edit
+    form(method='POST', action='/getVehicles')
+      h1 EDIT VEHICLE
+      |     
+      div
+        each item, i in vehicles.vehicles
+          - if (vehicleId == item.id)
+            p #{item.id}
+            div
+              input(type='text', name='regNumber', placeholder='Namn')
+            div
+              input(type='text', name='vehicleID', placeholder='#{vehicleId}')
+            div
+              input(type='text', name='latestAnnualCarInspection', placeholder='#{item.latestAnnualCarInspection}')
+      div
+        input(type='text', name='regNumber', placeholder='Namn')
+      div
+        input(type='text', name='vehicleID', placeholder='#{vehicleId}')
+      //div
+        input(type='text', name='vehicleId', placeholder='vehicleId')
+      //div
+        input(type='text', name='title', placeholder='Namn')
+      //div
+        input(type='text', name='roastery', placeholder='Rosteri')
+      //div
+        input(type='text', name='country', placeholder='Land')
+      //div
+        input(type='text', name='producer', placeholder='Producent')
+      //div
+        input(type='text', name='brewingMethod', placeholder='Bryggmetod')
+      //div
+        input(type='text', name='about', placeholder='Beskrivning')
+      p
+        button.myButton Spara

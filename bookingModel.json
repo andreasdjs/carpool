@@ -59,7 +59,7 @@
 	    {
 	    	"bookingId": "9",
 	        "userId": "123",
-	        "vehicleId": "122",
+	        "vehicleId": "102",
 	        "startDate" : "2016-05-01",
 	        "endDate": "2016-05-05"
 	    }	

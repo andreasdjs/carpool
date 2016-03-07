@@ -9,42 +9,44 @@ block content
         p Denna månad: #{thisMonth}
       - else 
         p Ingen månad.
-      table
-        thead
-          tr
-            th ID
-            th Reg nummer
-            th Bilmärke
-            th Modell
-            th Storlek
-            th Bränsle
-            //th lastInspectionMonth
-            th(colspan='2')
-        tbody
-          each item, i in vehicles.vehicles
-            - if (thisMonth == item.lastInspectionMonth)
-              tr.alert
-                td= item.id
-                td= item.regNumber
-                td= item.brand
-                td= item.name
-                td= item.type
-                td= item.fuel
-                //td= item.lastInspectionMonth
-                td
-                  button(id='btnAdd',onClick='onAdd()')  Ändra
-                td
-                  button(id='btnDelete',onClick='onDelete()')  Radera
-            - else
-              tr
-                td= item.id
-                td= item.regNumber
-                td= item.brand
-                td= item.name
-                td= item.type
-                td= item.fuel
-                //td= item.lastInspectionMonth
-                td
-                  button(id='btnAdd',onClick='onAdd()')  Ändra
-                td
-                  button(id='btnDelete',onClick='onDelete()')  Radera
+      form(method='POST', action='/editVehicle')
+        table
+          thead
+            tr
+              th ID
+              th Reg nummer
+              th Bilmärke
+              th Modell
+              th Storlek
+              th Bränsle
+              //th lastInspectionMonth
+              th(colspan='2')
+          tbody
+            each item, i in vehicles.vehicles
+              - if (thisMonth == item.lastInspectionMonth)
+                tr.alert
+                  td= item.id
+                  td= item.regNumber
+                  td= item.brand
+                  td= item.name
+                  td= item.type
+                  td= item.fuel
+                  //td= item.lastInspectionMonth
+                  td
+                    button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Ändra
+                  td
+                    button(id='btnDelete',onClick='onDelete()')  Radera
+              - else
+                tr
+                  td= item.id
+                  td= item.regNumber
+                  td= item.brand
+                  td= item.name
+                  td= item.type
+                  td= item.fuel
+                  //td= item.lastInspectionMonth
+                  td
+                    button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Ändra
+                    //button(id='btnAdd',onClick='onAdd()')  Ändra
+                  td
+                    button(id='btnDelete',onClick='onDelete()')  Radera
