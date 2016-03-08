@@ -1,6 +1,6 @@
 {
     "vehicles": [
-    	{
+    {
     		"id":"1",
     		"regNumber": "ABC123",
 			"brand": "Volvo",
@@ -8,7 +8,7 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "164324",
 			"status": "available",
 			"lastInspectionMonth" : "1",
 			"latestAnnualCarInspection" : "2015"
@@ -47,7 +47,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "124324",
 			"status": "available",
 			"lastInspectionMonth" : "4",
 			"latestAnnualCarInspection" : "2015"
@@ -60,7 +60,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "134304",
 			"status": "available",
 			"lastInspectionMonth" : "5",
 			"latestAnnualCarInspection" : "2015"
@@ -99,7 +99,7 @@
 			"transmission":"manuell",
 			"type": "L",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "34324",
 			"status": "available",
 			"lastInspectionMonth" : "8",
 			"latestAnnualCarInspection" : "2015"
@@ -125,7 +125,7 @@
 			"transmission":"manuell",
 			"type": "XL",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "4324",
 			"status": "available",
 			"lastInspectionMonth" : "10",
 			"latestAnnualCarInspection" : "2015"
@@ -177,7 +177,7 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "324",
 			"status": "available",
 			"lastInspectionMonth" : "2",
 			"latestAnnualCarInspection" : "2015"
@@ -203,7 +203,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "13424",
 			"status": "available",
 			"lastInspectionMonth" : "4",
 			"latestAnnualCarInspection" : "2015"
@@ -229,7 +229,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "1344",
 			"status": "available",
 			"lastInspectionMonth" : "6",
 			"latestAnnualCarInspection" : "2015"
@@ -255,7 +255,7 @@
 			"transmission":"manuell",
 			"type": "L",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "13324",
 			"status": "available",
 			"lastInspectionMonth" : "8",
 			"latestAnnualCarInspection" : "2015"
@@ -268,7 +268,7 @@
 			"transmission":"manuell",
 			"type": "L",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "1343",
 			"status": "available",
 			"lastInspectionMonth" : "9",
 			"latestAnnualCarInspection" : "2015"
@@ -320,7 +320,7 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "13324",
 			"status": "available",
 			"lastInspectionMonth" : "1",
 			"latestAnnualCarInspection" : "2015"

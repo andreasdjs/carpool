@@ -1,0 +1,62 @@
+extends layout
+
+block content
+  #add
+    form(method='POST', action='http://localhost:3000/carAdded')
+      h1 Lägg till bil
+      div
+        label(for='id')
+          b Bilens ID (P-plats)
+        div
+        input(type='text', name='vehicleId', placeholder='ID')
+      div
+        label(for='regNummer')
+          b Registreringsnummer
+        div
+        input(type='text', name='regNummer', placeholder='Regnummer')
+      div
+        label(for='brand')
+          b Bilmärke
+        div
+        input(type='text', name='brand', placeholder='Bilmärke')
+      div
+        label(for='name')
+          b Modell
+        div
+        input(type='text', name='name', placeholder='Model')
+      div
+        label(for='transmission')
+          b Växellåda
+        div
+        input(type='text', name='transmission', placeholder='Växellåda')
+      div
+        label(for='type')
+          b Typ
+        div
+        input(type='text', name='type', placeholder='Typ')
+      div
+        label(for='fuel')
+          b Bränsle
+        div
+        input(type='text', name='fuel', placeholder='Bränsle')
+      div
+        label(for='mileage')
+          b Miltal
+        div
+        input(type='text', name='mileage', placeholder='Miltal')
+      div
+        label(for='status')
+          b Status
+        div
+        input(type='text', name='status', placeholder='Status')
+      div
+        label(for='lastInspectionMonth')
+          b Besiktningsmånad
+        div
+        input(type='text', name='lastInspectionMonth', placeholder='Besiktningsmånad')
+      div
+
+      p
+        button.myButton Lägg till bil
+      if written
+        p#notification Bil tillagd.

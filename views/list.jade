@@ -9,8 +9,11 @@ block content
         p Denna månad: #{thisMonth}
       - else 
         p Ingen månad.
+        div
+          button(id='btnAdd',onClick='onAdd()')  Lägg till bil
       form(method='POST', action='/editVehicle')
         table
+      table
           thead
             tr
               th ID
