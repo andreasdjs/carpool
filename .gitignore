@@ -32,6 +32,7 @@ users.txt
 vehicles.txt
 users.txt
 cars.txt
+*.txt
 
 # Optional npm cache directory
 .npm
