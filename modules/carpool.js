@@ -10,7 +10,6 @@ function readVehicles(callback) {
 
   fileReadStream.on('end', () => {
       var obj = JSON.parse(data);
-//      console.log(data);
       callback(obj); // Send object back
   });
 }
@@ -40,7 +39,6 @@ function readBookings(callback) {
 
   fileReadStream.on('end', () => {
       var obj = JSON.parse(data);
-//      console.log(data);
       callback(obj); // Send object back
   });
 }
@@ -76,17 +74,9 @@ function writeNewBooking(newEntryObject) {
 
   	var obj = JSON.parse(data);
 
-    /*
-  	console.log('data: \n\n' + data);
-  	console.log('obj: \n\n' + obj);
-  	console.log('newEntryObject: \n\n' + newEntryObject);
-    */
-
   	// Pushing new object to last position in product array
   	obj.bookings.push(newEntryObject);
 
-  	//console.log("Bookings including new object: " + JSON.stringify(obj));
-  	// Converting to text
   	var write = JSON.stringify(obj);
 
   	// Writing to disk
@@ -211,10 +201,7 @@ function checkBookingsByDate(callback, start, end) {
 
     });
     
-    // Should send back vehicleId clashing 
-//    console.log(clashingVehicles);
     callback(clashingVehicles);
-//    callback(obj); // Send object back with bookings
 
   });
 

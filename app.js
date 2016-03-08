@@ -12,7 +12,6 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
-// var availableVehicles = require('./routes/availableVehicles');
 var login = require('./routes/login');
 
 var app = express();
@@ -34,7 +33,6 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
-// app.use('/availableVehicles', availableVehicles);
 app.use('/login', login);
 
 
@@ -100,12 +98,6 @@ app.post('/sent', function(req, res) {
   }
   setNewMaxId(); */
 
-/*
-  res.render('newBooking', {
-    written: 'Fordonet är bokat.'
-  });
-*/
-
   // Response with order confirmation
 
   res.render('orderConfirmation', {
@@ -123,65 +115,15 @@ app.post('/sent', function(req, res) {
 /* Recieve POST data & write new booking */
 
 app.post('/editVehicle', function(req, res) {
-//    var name = req.body.name;
-    var vehicleId = req.body.vehicleId;
-    console.log("Vehicle ID from editVehicle: " + req.body.vehicleId);
 
-/*    var writeNewObject = {
-      "bookingId": "7000",
-      "userId": "123",
-      "vehicleId": req.body.vehicleId,
-      "startDate" : req.body.startDate,
-      "endDate": req.body.endDate
-    };*/
-
-//    carpool.writeNewBooking(writeNewObject);
-
-/*
-  function setNewMaxId() {
-    coffee.getMaxId(function(i){
-      var iString = toString(i);
-      var writeNewObject = {
-          "id": i,
-            "title": req.body.title,
-            "roastery" : req.body.roastery,
-            "country": req.body.country,
-            "producer": req.body.producer,
-            "brewingMethod": req.body.brewingMethod,
-            "about": req.body.about
-      };
-      carpool.writeNewBooking(writeNewObject);
-    });
-  }
-  setNewMaxId(); */
-
-/*
-  res.render('newBooking', {
-    written: 'Fordonet är bokat.'
-  });
-*/
-
+  var vehicleId = req.body.vehicleId;
+  console.log("Vehicle ID from editVehicle: " + req.body.vehicleId);
 
   carpool.readVehicles(pushContent);
 
   function pushContent(obj){
 
-  
-
-    //console.log('object from readVehicles:\n\n' + JSON.stringify(obj));
-    // Response with a list of available vehicles 
-
-/*
-    res.render('availableVehicles', {
-        title: 'Tillgängliga fordon (2/3)',
-        startDate: req.body.startDate,
-        endDate: req.body.endDate,
-        vehicles: obj
-    });
-*/
-
-
-    // Response with order confirmation
+    // Response with edit Vehicle
 
     res.render('editVehicle', {
       vehicleId: req.body.vehicleId,
@@ -191,9 +133,7 @@ app.post('/editVehicle', function(req, res) {
       vehicles: obj
     });
 
-
   }
-
 
 });
 
@@ -207,15 +147,10 @@ app.post('/getVehicles', function(req, res) {
   console.log("Start date: " + req.body.startDate);
   console.log("End date: " + req.body.endDate);
 
-
-
   carpool.readVehicles(pushContent);
 
   function pushContent(obj){     
-/*
-    var start = "2016-01-01";
-    var end = "2016-03-05";
-*/
+
     var start = req.body.startDate;
     var end = req.body.endDate;
 
@@ -225,82 +160,35 @@ app.post('/getVehicles', function(req, res) {
     function pushBookings(clashingVehicles){
       console.log('\nClashing vehicles: ' + clashingVehicles);
 
-/*
-        var filtered_obj = obj.filter(function(value){
-          return value.id !== "1";
-        });
-*/
        if (clashingVehicles.length !== 0) {
            
-           console.log("Handle clashes.");
-/*
-for (i = 0; i < cars.length; i++) { 
-    text += cars[i] + "<br>";
-}
-*/
+          console.log("Handle clashes.");
+
           for (i = 0; i < clashingVehicles.length; i++) {
 
-          obj.vehicles = obj.vehicles.filter(function (el) {
-            return el.id != clashingVehicles[i];
-          });
+            obj.vehicles = obj.vehicles.filter(function (el) {
+              return el.id != clashingVehicles[i];
+            });
 
           }
 
-/*          var newArray = obj.vehicles.filter(function (el) {
-            return el.id != clashingVehicles[0];
-          });
-*/
-
-/*
-          var newArray = obj.vehicles.filter(function (el) {
-            return el.id >= 12;
-          });
-*/
-
-          console.log(JSON.stringify(obj));
+          // console.log(JSON.stringify(obj));
 
        }
 
-      
-
       res.render('availableVehicles', {
           title: 'Tillgängliga fordon (2/3)',
+          username: req.cookies.username,
           startDate: req.body.startDate,
           endDate: req.body.endDate,
           vehicles: obj
       });
 
-
     }
-
-/*
-
-          res.render('availableVehicles', {
-              title: 'Tillgängliga fordon (2/3)',
-              startDate: req.body.startDate,
-              endDate: req.body.endDate,
-              vehicles: obj
-          });
-
-*/
 
   }
 
 });
-
-/*
-
-var start = "2016-01-01";
-var end = "2016-03-05";
-
-carpool.checkBookingsByDate(pushBookings, start, end);
-
-function pushBookings(clashingVehicles){
-  console.log('\nClashing vehicles: ' + clashingVehicles);
-}
-
-*/
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
