@@ -233,6 +233,31 @@ function newTime() {
   return today;
 }
 
+function getBookingsMaxId(callback) {
+  var fileReadStream = fs.createReadStream('bookings.txt');
+  var data = "";
+  var maxId = 0;
+
+  fileReadStream.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  fileReadStream.on('end', () => {
+      var obj = JSON.parse(data);
+
+      obj.bookings.forEach(function(element){
+      if (parseInt(element.bookingId) >= maxId) {
+        maxId = parseInt(element.bookingId) + 1;
+      }
+
+      });
+      callback(maxId);
+  });
+}
+
+
+module.exports.getBookingsMaxId = getBookingsMaxId;
+
 module.exports.initialWriteBookings = initialWriteBookings;
 module.exports.writeNewBooking = writeNewBooking;
 

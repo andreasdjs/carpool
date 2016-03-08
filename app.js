@@ -70,33 +70,23 @@ app.post('/sent', function(req, res) {
     var vehicleId = req.body.vehicleId;
     console.log("Vehicle ID: " + req.body.vehicleId);
 
-    var writeNewObject = {
-      "bookingId": "7000",
-      "userId": "123",
-      "vehicleId": req.body.vehicleId,
-      "startDate" : req.body.startDate,
-      "endDate": req.body.endDate
-    };
+    // get new booking id to set in new booking object
 
-    carpool.writeNewBooking(writeNewObject);
+    carpool.getBookingsMaxId(pushContent);
 
-/*
-  function setNewMaxId() {
-    coffee.getMaxId(function(i){
-      var iString = toString(i);
+    function pushContent(maxId){
+
       var writeNewObject = {
-          "id": i,
-            "title": req.body.title,
-            "roastery" : req.body.roastery,
-            "country": req.body.country,
-            "producer": req.body.producer,
-            "brewingMethod": req.body.brewingMethod,
-            "about": req.body.about
+        "bookingId": maxId,
+        "userId": "123",
+        "vehicleId": req.body.vehicleId,
+        "startDate" : req.body.startDate,
+        "endDate": req.body.endDate
       };
+
       carpool.writeNewBooking(writeNewObject);
-    });
-  }
-  setNewMaxId(); */
+
+    }
 
   // Response with order confirmation
 
@@ -109,7 +99,6 @@ app.post('/sent', function(req, res) {
   });
 
 });
-
 
 
 /* Recieve POST data & write new booking */
