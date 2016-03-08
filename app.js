@@ -12,6 +12,8 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
+var adminNewBooking = require('./routes/adminNewBooking');
+// var availableVehicles = require('./routes/availableVehicles');
 var login = require('./routes/login');
 
 var app = express();
@@ -33,6 +35,8 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
+app.use('/AdminNewBooking', adminNewBooking);
+// app.use('/availableVehicles', availableVehicles);
 app.use('/login', login);
 
 
@@ -50,11 +54,22 @@ app.post('/loginSent', function(req, res) {
 
   console.log(req.body.username + " tried to login.")
 
+  if (req.body.username === "admin") {
 
   res.render('index', {
     written: 'User logged in.',
     username: req.body.username
   });
+
+  } else {
+  res.render('newBooking', {
+    written: 'User logged in.',
+    username: req.body.username
+  });
+
+  }
+
+
 });
 
 
@@ -98,6 +113,28 @@ app.post('/sent', function(req, res) {
   res.render('newBooking', {
     written: 'Fordonet är bokat.'
   });
+});
+
+
+/* Recieve POST data from select date form*/
+
+app.post('/getVehicles', function(req, res) {
+
+  /* Replace with code that singles out non booked vehicles */
+
+  carpool.readVehicles(pushContent);
+
+  function pushContent(obj){
+
+    console.log('object from readVehicles:\n\n' + obj);
+
+    res.render('availableVehicles', {
+        title: 'Tillgängliga fordon',
+        vehicles: obj
+    });
+
+  }
+
 });
 
 
