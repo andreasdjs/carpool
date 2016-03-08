@@ -10,14 +10,14 @@
 	    {
 	    	"bookingId": "2",
 	        "userId": "123",
-	        "vehicleId": "1",
+	        "vehicleId": "2",
 	        "startDate" : "2016-02-01",
 	        "endDate": "2016-02-05"
 	    },
 	    {
 	    	"bookingId": "3",
 	        "userId": "123",
-	        "vehicleId": "1",
+	        "vehicleId": "3",
 	        "startDate" : "2016-03-01",
 	        "endDate": "2016-03-05"
 	    },
@@ -38,9 +38,30 @@
 	    {
 	    	"bookingId": "6",
 	        "userId": "123",
-	        "vehicleId": "2",
+	        "vehicleId": "12",
 	        "startDate" : "2016-05-01",
 	        "endDate": "2016-05-05"
-	    }	    
+	    },
+	    {
+	    	"bookingId": "7",
+	        "userId": "123",
+	        "vehicleId": "88",
+	        "startDate" : "2016-04-01",
+	        "endDate": "2016-04-05"
+	    },
+	    {
+	    	"bookingId": "8",
+	        "userId": "123",
+	        "vehicleId": "1",
+	        "startDate" : "2016-05-01",
+	        "endDate": "2016-05-05"
+	    },
+	    {
+	    	"bookingId": "9",
+	        "userId": "123",
+	        "vehicleId": "102",
+	        "startDate" : "2016-05-01",
+	        "endDate": "2016-05-05"
+	    }
     ]
 }

@@ -12,7 +12,8 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
-var adminNewBooking = require('./routes/adminNewBooking');
+var newVehicle = require('./routes/newVehicle');
+//var adminNewBooking = require('./routes/adminNewBooking');
 // var availableVehicles = require('./routes/availableVehicles');
 var login = require('./routes/login');
 
@@ -35,7 +36,8 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
-app.use('/AdminNewBooking', adminNewBooking);
+app.use('/newVehicle', newVehicle);
+//app.use('/AdminNewBooking', adminNewBooking);
 // app.use('/availableVehicles', availableVehicles);
 app.use('/login', login);
 

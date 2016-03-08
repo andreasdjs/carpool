@@ -1,7 +1,6 @@
 {
-<<<<<<< HEAD
     "vehicles": [
-    	{
+    {
     		"id":"1",
     		"regNumber": "ABC123",
 			"brand": "Volvo",
@@ -9,55 +8,9 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "164324",
 			"status": "available",
 			"lastInspectionMonth" : "1"
-=======
-	"volvo":{
-		"carname":"volvo",
-		
-		"bil1":{
-			"Name":"volvo v40",
-			"Regnummer":"uge678",
-			"Typ":"",
-			"Drivmedel":"disel",
-			"Kontrollbesikting":"",
-			"Service":"",
-			"Status":"Bokad",
-			"Passengers":"5",
-			"AirCondition":"yes",
-			"Doors":"5",
-			"MinimalAge":"21yr",
-			"DrivingLicense":"2 yrs min",
-			"Transmission":"manual"
-				},
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-		
-		"bil2":{
-			"name":"volvo c70",
-			"Passengers":"2",
-			"AirCondition":"yes",
-			"Doors":"3",
-			"MinimalAge":"25yr",
-			"DrivingLicense":"5yr",
-			"Transmission":"manual"
-				}
-		
-		
-		
-		
->>>>>>> 6c9a38c224441993330df085eb0af7c47f79c4ba
 		},
 		{
     		"id":"2",
@@ -91,7 +44,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "124324",
 			"status": "available",
 			"lastInspectionMonth" : "4"
 		},
@@ -103,7 +56,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "134304",
 			"status": "available",
 			"lastInspectionMonth" : "5"
 		},
@@ -139,7 +92,7 @@
 			"transmission":"manuell",
 			"type": "L",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "34324",
 			"status": "available",
 			"lastInspectionMonth" : "8"
 		},
@@ -163,7 +116,7 @@
 			"transmission":"manuell",
 			"type": "XL",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "4324",
 			"status": "available",
 			"lastInspectionMonth" : "10"
 		},
@@ -211,7 +164,7 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "324",
 			"status": "available",
 			"lastInspectionMonth" : "2"
 		},
@@ -235,7 +188,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "13424",
 			"status": "available",
 			"lastInspectionMonth" : "4"
 		},
@@ -259,7 +212,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "1344",
 			"status": "available",
 			"lastInspectionMonth" : "6"
 		},
@@ -283,7 +236,7 @@
 			"transmission":"manuell",
 			"type": "L",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "13324",
 			"status": "available",
 			"lastInspectionMonth" : "8"
 		},
@@ -295,7 +248,7 @@
 			"transmission":"manuell",
 			"type": "L",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "1343",
 			"status": "available",
 			"lastInspectionMonth" : "9"
 		},
@@ -343,7 +296,7 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "13324",
 			"status": "available",
 			"lastInspectionMonth" : "1"
 		},

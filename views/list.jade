@@ -5,6 +5,8 @@ block content
   #listContainer
     #productList
       h1= title
+        div
+          button(id='btnAdd',onClick='onAdd()')  Lägg till bil
       table
           thead
               tr
@@ -25,6 +27,6 @@ block content
                       td= item.type
                       td= item.fuel
                       td
-                        button(id='btnAdd',onClick='onAdd()')  Ändra
+                        button(id='btnBes',onClick='onBes()')  Besiktning
                       td
                         button(id='btnDelete',onClick='onDelete()')  Radera
