@@ -6,7 +6,11 @@ var router = express.Router();
 */
 
 router.get('/', function(req, res, next) {
-  res.render('newVehicle');
+
+	res.render('newVehicle', {
+        username: req.cookies.username
+	});
+
 });
 
 module.exports = router;
