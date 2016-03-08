@@ -12,6 +12,7 @@ var users = require('./routes/users');
 var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
+var newVehicle = require('./routes/newVehicle');
 var login = require('./routes/login');
 
 var app = express();
@@ -33,6 +34,7 @@ app.use('/users', users);
 app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
+app.use('/newVehicle', newVehicle);
 app.use('/login', login);
 
 
