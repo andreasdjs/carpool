@@ -4,16 +4,17 @@ block content
   //h1= title
   #listContainer
     #productList
-      h1= title
-      - if (thisMonth == '3')
+      h1 VEHICLES 
+      //- if (thisMonth == '3')
         p Denna månad: #{thisMonth}
-      - else 
+      //- else 
         p Ingen månad.
-        div
-          button(id='btnAdd',onClick='onAdd()')  Lägg till bil
+      div
+        button(id='btnAdd',onClick='location.href="newVehicle";')  Lägg till bil
+        br
+        br
       form(method='POST', action='/editVehicle')
         table
-      table
           thead
             tr
               th ID
