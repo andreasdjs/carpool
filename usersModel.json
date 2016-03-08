@@ -13,22 +13,44 @@
 		},
 		{
 			"userId": "2",
-			"employeeNumber": "124",
+			"employeeNumber": "2",
 			"firstName": "Lisa",
 			"lastName": "Simpson",
 			"email": "user@yourdomain.com",
-			"username": "user",
+			"username": "lisa",
 			"hashed_password": "abc123",
 			"salt": "abc123",
 			"admin": "false"
 		},
 		{
 			"userId": "3",
-			"employeeNumber": "125",
+			"employeeNumber": "3",
 			"firstName": "Bart",
 			"lastName": "Simpson",
 			"email": "user@yourdomain.com",
-			"username": "user",
+			"username": "bart",
+			"hashed_password": "abc123",
+			"salt": "abc123",
+			"admin": "false"
+		},
+		{
+			"userId": "4",
+			"employeeNumber": "4",
+			"firstName": "Homer",
+			"lastName": "Simpson",
+			"email": "user@yourdomain.com",
+			"username": "homer",
+			"hashed_password": "abc123",
+			"salt": "abc123",
+			"admin": "false"
+		},
+		{
+			"userId": "5",
+			"employeeNumber": "5",
+			"firstName": "Marge",
+			"lastName": "Simpson",
+			"email": "user@yourdomain.com",
+			"username": "marge",
 			"hashed_password": "abc123",
 			"salt": "abc123",
 			"admin": "false"

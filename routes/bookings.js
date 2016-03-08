@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 
     function pushContent(obj){
 
-    	console.log('object from readBookings:\n\n' + JSON.stringify(obj));
+    	// console.log('object from readBookings:\n\n' + JSON.stringify(obj));
 
     	res.render('bookings', {
           username: req.cookies.username,

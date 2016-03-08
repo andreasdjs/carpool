@@ -39,6 +39,8 @@ app.use('/login', login);
 /* Initial Write of JSON-data */
 
 carpool.initialWriteBookings();
+carpool.initialWriteVehicles();
+carpool.initialWriteUsers();
 
 
 /* Recieve login POST */
@@ -46,20 +48,41 @@ carpool.initialWriteBookings();
 app.post('/loginSent', function(req, res) {
 
   res.cookie('username', req.body.username);
-  console.log('cookie set:' + req.cookies.username);
-  console.log(req.body.username + " tried to login.")
 
-  if (req.body.username === "admin") {
-    res.render('index', {
-      written: 'User logged in.',
-      username: req.body.username
-    });
-  } else {
-    res.render('newBooking', {
-      written: 'User logged in.',
-      username: req.body.username
-    });
-  }
+  /*
+  Insert cookie for employee number
+  */
+
+    carpool.readUsers(pushContent);
+
+    function pushContent(obj){
+
+      obj.users = obj.users.filter(function (el) {
+        return el.username == req.body.username;
+      });
+
+      // console.log("Current user: " + JSON.stringify(currentUser));
+
+      console.log("Setting cookie, employeeNumber: " + obj.users[0].employeeNumber);
+
+      res.cookie('employeeNumber', obj.users[0].employeeNumber);
+
+      // console.log('cookie set:' + req.cookies.username);
+      // console.log(req.body.username + " tried to login.")
+
+      if (req.body.username === "admin") {
+        res.render('index', {
+          written: 'User logged in.',
+          username: req.body.username
+        });
+      } else {
+        res.render('newBooking', {
+          written: 'User logged in.',
+          username: req.body.username
+        });
+      }
+
+    }
 
 });
 
@@ -78,7 +101,7 @@ app.post('/sent', function(req, res) {
 
       var writeNewObject = {
         "bookingId": maxId,
-        "userId": "123",
+        "userId": req.cookies.employeeNumber,
         "vehicleId": req.body.vehicleId,
         "startDate" : req.body.startDate,
         "endDate": req.body.endDate

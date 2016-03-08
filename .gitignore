@@ -28,8 +28,10 @@ node_modules
 
 # Data files
 bookings.txt
+users.txt
 vehicles.txt
 users.txt
+cars.txt
 
 # Optional npm cache directory
 .npm

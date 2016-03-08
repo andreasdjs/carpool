@@ -15,7 +15,7 @@ function readVehicles(callback) {
 }
 
 function readUsers(callback) {
-  var fileReadStream = fs.createReadStream('usersModel.json');
+  var fileReadStream = fs.createReadStream('users.txt');
   var data = "";
 
   fileReadStream.on('data', (chunk) => {
@@ -24,7 +24,7 @@ function readUsers(callback) {
 
   fileReadStream.on('end', () => {
       var obj = JSON.parse(data);
-      console.log(data);
+      // console.log(data);
       callback(obj); // Send object back
   });
 }
@@ -60,6 +60,41 @@ function initialWriteBookings() {
   	}); 
   });
 }
+
+
+function initialWriteUsers() {
+  var fileReadStream = fs.createReadStream('usersModel.json');
+  var data = "";
+
+  fileReadStream.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  fileReadStream.on('end', () => {
+    fs.writeFile('users.txt', data, (err) => {
+      if (err) throw err;
+      console.log('New fresh JSON Users data file written.');
+    }); 
+  });
+}
+
+
+function initialWriteVehicles() {
+  var fileReadStream = fs.createReadStream('carModel.json');
+  var data = "";
+
+  fileReadStream.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  fileReadStream.on('end', () => {
+    fs.writeFile('vehicles.txt', data, (err) => {
+      if (err) throw err;
+      console.log('New fresh JSON vehicles data file written.');
+    }); 
+  });
+}
+
 
 function writeNewBooking(newEntryObject) {
   var fileReadStream = fs.createReadStream('bookings.txt');
@@ -259,6 +294,9 @@ function getBookingsMaxId(callback) {
 module.exports.getBookingsMaxId = getBookingsMaxId;
 
 module.exports.initialWriteBookings = initialWriteBookings;
+module.exports.initialWriteUsers = initialWriteUsers;
+module.exports.initialWriteVehicles = initialWriteVehicles;
+
 module.exports.writeNewBooking = writeNewBooking;
 
 module.exports.readBookings = readBookings;
