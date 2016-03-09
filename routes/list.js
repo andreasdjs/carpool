@@ -11,15 +11,20 @@ router.get('/', function(req, res, next) {
   	passing the object to the JADE template.
 */
 
+/*
   var today = new Date();
   var thisMonth = today.getMonth()+1; //January is 0!
   console.log("Denna månad: " + thisMonth);
+*/
+
 
 	carpool.readVehicles(pushContent);
 
   function pushContent(obj){
 
   	console.log('object from readVehicles:\n\n' + obj);
+
+    var thisMonth = carpool.getTodaysMonth();
 
   	res.render('list', {
       	title: 'Vehicles',

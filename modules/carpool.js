@@ -290,6 +290,14 @@ function getBookingsMaxId(callback) {
   });
 }
 
+function getTodaysMonth() {
+    var today = new Date();
+    var thisMonth = today.getMonth()+1; //January is 0!
+    // console.log("Denna månad: " + thisMonth);
+    return thisMonth;
+}
+
+module.exports.getTodaysMonth = getTodaysMonth;
 
 module.exports.getBookingsMaxId = getBookingsMaxId;
 

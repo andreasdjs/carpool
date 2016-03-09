@@ -67,6 +67,15 @@ app.get('/removeVehicle', function(req, res) {
       console.log('Removed vehicle with id:' + req.param('id') + '. Data file written.');
     }); 
 
+    var thisMonth = carpool.getTodaysMonth();
+
+    res.render('list', {
+        title: 'Vehicles',
+        thisMonth: thisMonth,
+        username: req.cookies.username,
+        vehicles: obj
+    });
+
   }  
   
 });
