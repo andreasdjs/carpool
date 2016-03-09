@@ -271,4 +271,6 @@ tr.alert {
 	color: white;
 }
 
-/*tr.alert td { background-color: red; }*/
+.dateLayout {
+	padding-bottom:12px;
+}
