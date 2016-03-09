@@ -46,7 +46,7 @@ carpool.initialWriteVehicles();
 carpool.initialWriteUsers();
 
 /* Remove vehicle */
-  
+
 app.get('/removeVehicle', function(req, res) {
 
   carpool.readVehicles(pushContent);
@@ -54,18 +54,18 @@ app.get('/removeVehicle', function(req, res) {
   function pushContent(obj){
 
     // Filter remove vehicle object by id
-    // Example: http://localhost:3000/removeVehicle?id=1    
+    // Example: http://localhost:3000/removeVehicle?id=1
 
     obj.vehicles = obj.vehicles.filter(function (el) {
       return el.id !== req.param('id');
     });
 
-    var newData = JSON.stringify(obj); 
+    var newData = JSON.stringify(obj);
 
     fs.writeFile('vehicles.txt', newData, (err) => {
       if (err) throw err;
       console.log('Removed vehicle with id:' + req.param('id') + '. Data file written.');
-    }); 
+    });
 
     var thisMonth = carpool.getTodaysMonth();
 
@@ -76,8 +76,8 @@ app.get('/removeVehicle', function(req, res) {
         vehicles: obj
     });
 
-  }  
-  
+  }
+
 });
 
   //console.log(req.body.id);
@@ -86,28 +86,47 @@ app.get('/removeVehicle', function(req, res) {
   console.log("post request: " + req.body.id);
   var stream = fs.createReadStream('vehicles.txt');
   var data='';
-  
+
 
       stream.on('data',function(chunk){
       data += chunk;
       }); // end stream data
-    
+
       stream.on('end',function(){
         var obj = JSON.parse(data);
-      
+
         var filtered_obj = obj.filter(function(value){
           return value.id !== gugge;
         });
-      
+
         obj = JSON.stringify(filtered_obj);
         console.log("Toni obj: " + obj);
-        
-        
+
+
         fs.writeFile('carM.json',obj);
       });// end stream end
     */
 /*}
 */
+
+
+app.post('/addNewVehicle',function(req,res){
+	var writeNewVehicle = req.body;
+
+  carpool.readVehicles(pushContent);
+
+  function pushContent(obj){
+
+    obj.vehicles.push(writeNewVehicle)
+      //console.log(obj);
+    var newData = JSON.stringify(obj);
+
+    fs.writeFile("vehicles.txt", newData, (err) => {
+      if (err) throw err;
+      console.log("Data file written with new vehicle.");
+    });
+    }
+	}); // end add post
 
 
 /* Recieve login POST */
@@ -247,7 +266,7 @@ app.post('/getVehicles', function(req, res) {
 
   carpool.readVehicles(pushContent);
 
-  function pushContent(obj){     
+  function pushContent(obj){
 
     var start = req.body.startDate;
     var end = req.body.endDate;
@@ -259,7 +278,7 @@ app.post('/getVehicles', function(req, res) {
       console.log('\nClashing vehicles: ' + clashingVehicles);
 
        if (clashingVehicles.length !== 0) {
-           
+
           console.log("Handle clashes.");
 
           for (i = 0; i < clashingVehicles.length; i++) {

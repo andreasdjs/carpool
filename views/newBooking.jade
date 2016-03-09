@@ -5,37 +5,24 @@ block content
     form(method='POST', action='/getVehicles')
       h1 HITTA FORDON (1/3)
       | &#x9;
-      |     
       div
-        label(for='startDate') 
+        label(for='startDate')
         b Startdatum
-      |   
+
       input(type='date', name='startDate', min='#{today}', required='')
-      |     
-      div 
+
+      div
         label(for='endDate')
           b Slutdatum
       input(type='date', name='endDate', min='#{today}', required='')
-      //div
-        input(type='text', name='vehicleId', placeholder='vehicleId')
-      //div
-        input(type='text', name='title', placeholder='Namn')
-      | &#x9;&#x9;
-      //div
-        input(type='text', name='roastery', placeholder='Rosteri')
-      | &#x9;&#x9;
-      //div
-        input(type='text', name='country', placeholder='Land')
-      | &#x9;&#x9;
-      //div
-        input(type='text', name='producer', placeholder='Producent')
-      | &#x9;&#x9;
-      //div
-        input(type='text', name='brewingMethod', placeholder='Bryggmetod')
-      | &#x9;&#x9;
-      //div
-        input(type='text', name='about', placeholder='Beskrivning')
-      | &#x9;&#x9;
+      div
+        input(type='radio', name='gender', value='company')
+        |  Företag
+
+
+        input(type='radio', name='gender', value='private')
+        |  Privat
+        br
       p
         button.myButton Visa fordon
       // if written
