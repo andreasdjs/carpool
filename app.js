@@ -109,6 +109,36 @@ app.get('/removeVehicle', function(req, res) {
 /*}
 */
 
+/* Handle post from addNewVehicle */
+
+app.post('/addNewVehicle',function(req,res){
+  var writeNewVehicle = req.body;
+
+  carpool.readVehicles(pushContent);
+
+  function pushContent(obj){
+ 
+    obj.vehicles.push(writeNewVehicle);
+    
+    var newData = JSON.stringify(obj);
+
+    fs.writeFile('vehicles.txt', newData, (err) => {
+      if (err) throw err;
+      console.log('Data file written with new vehicle.');
+    }); 
+
+    var thisMonth = carpool.getTodaysMonth();
+
+    res.render('list', {
+        title: 'Fordon',
+        thisMonth: thisMonth,
+        username: req.cookies.username,
+        vehicles: obj
+    });
+
+  }
+ 
+}); 
 
 app.post('/addNewVehicle',function(req,res){
 	var writeNewVehicle = req.body;

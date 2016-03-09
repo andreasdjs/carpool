@@ -8,21 +8,44 @@ block content
       div
         label(for='startDate')
         b Startdatum
-
       input(type='date', name='startDate', min='#{today}', required='')
-
       div
         label(for='endDate')
           b Slutdatum
       input(type='date', name='endDate', min='#{today}', required='')
+      |
+      .dateLayout
+        input(type='date', name='startDate', min='#{today}', required='')
       div
-        input(type='radio', name='gender', value='company')
-        |  Företag
-
-
-        input(type='radio', name='gender', value='private')
+        label(for='endDate')
+          b Slutdatum
+      .dateLayout
+        input(type='date', name='endDate', min='#{today}', required='')
+      .radioLayout
+        input(type='radio', name='gender', value='male', checked='')
+        |  Företag &nbsp;
+        input(type='radio', name='gender', value='female')
         |  Privat
-        br
+      //div
+        input(type='text', name='vehicleId', placeholder='vehicleId')
+      //div
+        input(type='text', name='title', placeholder='Namn')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='roastery', placeholder='Rosteri')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='country', placeholder='Land')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='producer', placeholder='Producent')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='brewingMethod', placeholder='Bryggmetod')
+      | &#x9;&#x9;
+      //div
+        input(type='text', name='about', placeholder='Beskrivning')
+      | &#x9;&#x9;
       p
         button.myButton Visa fordon
       // if written
