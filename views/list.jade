@@ -39,7 +39,7 @@ block content
                   td
                     button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Ändra
                   td
-                    button(id='btnDelete',onClick='onDelete()')  Radera
+                    button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
               - else
                 tr
                   td= item.id
@@ -53,4 +53,4 @@ block content
                     button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Ändra
                     //button(id='btnAdd',onClick='onAdd()')  Ändra
                   td
-                    button(id='btnDelete',onClick='onDelete()')  Radera
+                    button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
