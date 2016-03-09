@@ -2,13 +2,13 @@ extends layout
 
 block content
   #add
-    form(method='POST', action='http://localhost:3000/carAdded')
+    form(method='POST', action='http://localhost:3000/addNewVehicle')
       h1 Lägg till bil
       div
         label(for='id')
           b Bilens ID (P-plats)
         div
-        input(type='text', name='vehicleId', placeholder='ID')
+        input(type='text', name='id', placeholder='ID')
       div
         label(for='regNummer')
           b Registreringsnummer
@@ -45,15 +45,16 @@ block content
         div
         input(type='text', name='mileage', placeholder='Miltal')
       div
-        label(for='status')
-          b Status
-        div
-        input(type='text', name='status', placeholder='Status')
-      div
         label(for='lastInspectionMonth')
           b Besiktningsmånad
         div
-        input(type='text', name='lastInspectionMonth', placeholder='Besiktningsmånad')
+        input(type='text', name='lastInspectionMonth', placeholder='3')
+      div
+        label(for='lastInspectionMonth')
+          b Besiktigad senast
+        div
+        input(type='text', name='latestAnnualCarInspection', placeholder='2016')
+
       div
 
       p
