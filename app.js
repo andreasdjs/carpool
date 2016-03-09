@@ -204,6 +204,24 @@ app.post('/editVehicle', function(req, res) {
 
     // Response with edit Vehicle
 
+    obj.vehicles = obj.vehicles.filter(function (el) {
+      return el.id === req.body.vehicleId;
+    });
+
+    console.log("editVehicle obj: " + JSON.stringify(obj.vehicles[0]));
+
+    var editVehicleObj = obj.vehicles[0];
+
+    console.log(JSON.stringify(editVehicleObj));
+
+    res.render('editVehicle', {
+      vehicleId: req.body.vehicleId,
+      startDate : req.body.startDate,
+      endDate: req.body.endDate,
+      username: req.cookies.username,
+      vehicle: editVehicleObj
+    });
+/*
     res.render('editVehicle', {
       vehicleId: req.body.vehicleId,
       startDate : req.body.startDate,
@@ -211,6 +229,7 @@ app.post('/editVehicle', function(req, res) {
       username: req.cookies.username,
       vehicles: obj
     });
+*/
 
   }
 
