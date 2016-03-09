@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 function readVehicles(callback) {
-  var fileReadStream = fs.createReadStream('carModel.json');
+  var fileReadStream = fs.createReadStream('vehicles.txt');
   var data = "";
 
   fileReadStream.on('data', (chunk) => {

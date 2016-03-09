@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var carpool = require('./modules/carpool')
+var fs = require('fs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -43,6 +44,61 @@ app.use('/login', login);
 carpool.initialWriteBookings();
 carpool.initialWriteVehicles();
 carpool.initialWriteUsers();
+
+/* Remove vehicle */
+  
+app.get('/removeVehicle', function(req, res) {
+
+  carpool.readVehicles(pushContent);
+
+  function pushContent(obj){
+
+    // Filter remove vehicle object by id
+    // Example: http://localhost:3000/removeVehicle?id=1    
+
+    obj.vehicles = obj.vehicles.filter(function (el) {
+      return el.id !== req.param('id');
+    });
+
+    var newData = JSON.stringify(obj); 
+
+    fs.writeFile('vehicles.txt', newData, (err) => {
+      if (err) throw err;
+      console.log('Removed vehicle with id:' + req.param('id') + '. Data file written.');
+    }); 
+
+  }  
+  
+});
+
+  //console.log(req.body.id);
+  /*
+  var gugge = req.body.id;
+  console.log("post request: " + req.body.id);
+  var stream = fs.createReadStream('vehicles.txt');
+  var data='';
+  
+
+      stream.on('data',function(chunk){
+      data += chunk;
+      }); // end stream data
+    
+      stream.on('end',function(){
+        var obj = JSON.parse(data);
+      
+        var filtered_obj = obj.filter(function(value){
+          return value.id !== gugge;
+        });
+      
+        obj = JSON.stringify(filtered_obj);
+        console.log("Toni obj: " + obj);
+        
+        
+        fs.writeFile('carM.json',obj);
+      });// end stream end
+    */
+/*}
+*/
 
 
 /* Recieve login POST */
