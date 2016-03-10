@@ -7,11 +7,13 @@ block content
       table
         thead
           tr
-            th Bokningsnummer
+            th Bokningsnr
             th Anställningsnr
             th Startdatum
             th Slutdatum
             th Bil id
+            th Förnamn
+            th Efternamn
           tbody
             each item, i in bookings.bookings
               tr
@@ -20,3 +22,5 @@ block content
                 td= item.startDate
                 td= item.endDate
                 td= item.vehicleId
+                td= item.firstName
+                td= item.lastName

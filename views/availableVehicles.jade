@@ -19,13 +19,39 @@ block content
               th Bränsle
               th
           tbody
-            each item, i in vehicles.vehicles
               tr
-                td= item.id
-                td= item.regNumber
-                td= item.brand
-                td= item.name
-                td= item.type
-                td= item.fuel
+                td= smallVehicle.id
+                td= smallVehicle.regNumber
+                td= smallVehicle.brand
+                td= smallVehicle.name
+                td= smallVehicle.type
+                td= smallVehicle.fuel
                 td
-                  button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Boka
+                  button(name='vehicleId',value='#{smallVehicle.id}',id='btnAdd',type='submit') Boka
+              tr
+                td= mediumVehicle.id
+                td= mediumVehicle.regNumber
+                td= mediumVehicle.brand
+                td= mediumVehicle.name
+                td= mediumVehicle.type
+                td= mediumVehicle.fuel
+                td
+                  button(name='vehicleId',value='#{mediumVehicle.id}',id='btnAdd',type='submit') Boka
+              tr
+                td= largeVehicle.id
+                td= largeVehicle.regNumber
+                td= largeVehicle.brand
+                td= largeVehicle.name
+                td= largeVehicle.type
+                td= largeVehicle.fuel
+                td
+                  button(name='vehicleId',value='#{largeVehicle.id}',id='btnAdd',type='submit') Boka
+              tr
+                td= xlVehicle.id
+                td= xlVehicle.regNumber
+                td= xlVehicle.brand
+                td= xlVehicle.name
+                td= xlVehicle.type
+                td= xlVehicle.fuel
+                td
+                  button(name='vehicleId',value='#{xlVehicle.id}',id='btnAdd',type='submit') Boka

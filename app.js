@@ -14,6 +14,7 @@ var list = require('./routes/list');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
 var newVehicle = require('./routes/newVehicle');
+var newUser = require('./routes/newUser');
 var login = require('./routes/login');
 
 var app = express();
@@ -36,6 +37,7 @@ app.use('/list', list);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
 app.use('/newVehicle', newVehicle);
+app.use('/newUser', newUser);
 app.use('/login', login);
 
 
@@ -140,6 +142,37 @@ app.post('/addNewVehicle',function(req,res){
  
 }); 
 
+
+/* Handle post from addNewUser */
+
+app.post('/addNewUser',function(req,res){
+  var writeNewUser = req.body;
+
+  carpool.readUsers(pushContent);
+
+  function pushContent(obj){
+ 
+    obj.users.push(writeNewUser);
+    
+    var newData = JSON.stringify(obj);
+
+    fs.writeFile('users.txt', newData, (err) => {
+      if (err) throw err;
+      console.log('Data file written with new user.');
+    }); 
+
+    var thisMonth = carpool.getTodaysMonth();
+
+    res.render('users', {
+        title: 'ANVÄNDARE',
+        username: req.cookies.username,
+        users: obj
+    });
+
+  }
+ 
+}); 
+
 /* Recieve login POST */
 
 app.post('/loginSent', function(req, res) {
@@ -163,6 +196,8 @@ app.post('/loginSent', function(req, res) {
       console.log("Setting cookie, employeeNumber: " + obj.users[0].employeeNumber);
 
       res.cookie('employeeNumber', obj.users[0].employeeNumber);
+      res.cookie('firstName', obj.users[0].firstName);
+      res.cookie('lastName', obj.users[0].lastName);
 
       // console.log('cookie set:' + req.cookies.username);
       // console.log(req.body.username + " tried to login.")
@@ -211,7 +246,9 @@ app.post('/sent', function(req, res) {
         "userId": req.cookies.employeeNumber,
         "vehicleId": req.body.vehicleId,
         "startDate" : req.body.startDate,
-        "endDate": req.body.endDate
+        "endDate": req.body.endDate,
+        "firstName": req.cookies.firstName,
+        "lastName" : req.cookies.lastName
       };
 
       carpool.writeNewBooking(writeNewObject);
@@ -225,7 +262,9 @@ app.post('/sent', function(req, res) {
     startDate : req.body.startDate,
     endDate: req.body.endDate,
     username: req.cookies.username,
-    written: 'Fordonet är bokat.'
+    written: 'Fordonet är bokat.',
+    firstName: req.cookies.firstName,
+    lastName: req.cookies.lastName
   });
 
 });
@@ -312,7 +351,7 @@ app.post('/getVehicles', function(req, res) {
 
        }
 
-       console.log(JSON.stringify(obj));          
+       //console.log(JSON.stringify(obj));          
 
       /* Sort by mileage, ascending order.  */ 
 
@@ -320,14 +359,52 @@ app.post('/getVehicles', function(req, res) {
         return a.mileage - b.mileage;
       });
 
-      //console.log(JSON.stringify(obj));
+       /* Small */
+
+        var smallVehicles = { "vehicles": [] };
+
+        smallVehicles.vehicles = obj.vehicles.filter(function (el) {
+              return el.type === "S";
+        });
+
+       /* Medium */
+
+        var mediumVehicles = { "vehicles": [] };
+
+        mediumVehicles.vehicles = obj.vehicles.filter(function (el) {
+              return el.type === "M";
+        });
+
+       /* Large */
+
+        var largeVehicles = { "vehicles": [] };
+
+        largeVehicles.vehicles = obj.vehicles.filter(function (el) {
+              return el.type === "L";
+        });
+
+       /* Extra large */
+
+        var xlVehicles = { "vehicles": [] };
+
+        xlVehicles.vehicles = obj.vehicles.filter(function (el) {
+              return el.type === "XL";
+        });
+
+
+        // console.log(JSON.stringify(smallVehicles));
+
+        //console.log(JSON.stringify(obj));
   
       res.render('availableVehicles', {
           title: 'Tillgängliga fordon (2/3)',
           username: req.cookies.username,
           startDate: req.body.startDate,
           endDate: req.body.endDate,
-          vehicles: obj
+          smallVehicle: smallVehicles.vehicles[0],
+          mediumVehicle: mediumVehicles.vehicles[0],
+          largeVehicle: largeVehicles.vehicles[0],
+          xlVehicle: xlVehicles.vehicles[0]
       });
 
     }

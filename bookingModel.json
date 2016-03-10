@@ -5,63 +5,81 @@
 	        "userId": "123",
 	        "vehicleId": "1",
 	        "startDate" : "2016-01-01",
-	        "endDate": "2016-01-05"
+	        "endDate": "2016-01-05",
+	        "firstName" : "Tony",
+	        "lastName": "Stark"
 	    },
 	    {
 	    	"bookingId": "2",
 	        "userId": "123",
 	        "vehicleId": "2",
 	        "startDate" : "2016-02-01",
-	        "endDate": "2016-02-05"
+	        "endDate": "2016-02-05",
+	        "firstName" : "Peter",
+	        "lastName": "Parker"
 	    },
 	    {
 	    	"bookingId": "3",
 	        "userId": "123",
 	        "vehicleId": "3",
 	        "startDate" : "2016-03-01",
-	        "endDate": "2016-03-05"
+	        "endDate": "2016-03-05",
+	        "firstName" : "Clark",
+	        "lastName": "Kent"
 	    },
 	    {
 	    	"bookingId": "4",
 	        "userId": "123",
 	        "vehicleId": "1",
 	        "startDate" : "2016-04-01",
-	        "endDate": "2016-04-05"
+	        "endDate": "2016-04-05",
+	        "firstName" : "Peter",
+	        "lastName": "Parker"	        
 	    },
 	    {
 	    	"bookingId": "5",
 	        "userId": "123",
 	        "vehicleId": "1",
 	        "startDate" : "2016-05-01",
-	        "endDate": "2016-05-05"
+	        "endDate": "2016-05-05",
+	        "firstName" : "James",
+	        "lastName": "Howlett"
 	    },
 	    {
 	    	"bookingId": "6",
 	        "userId": "123",
 	        "vehicleId": "12",
 	        "startDate" : "2016-05-01",
-	        "endDate": "2016-05-05"
+	        "endDate": "2016-05-05",
+	        "firstName" : "Anakin",
+	        "lastName": "Skywalker"
 	    },
 	    {
 	    	"bookingId": "7",
 	        "userId": "123",
 	        "vehicleId": "88",
 	        "startDate" : "2016-04-01",
-	        "endDate": "2016-04-05"
+	        "endDate": "2016-04-05",
+	        "firstName" : "Bruce",
+	        "lastName": "Banner"
 	    },
 	    {
 	    	"bookingId": "8",
 	        "userId": "123",
 	        "vehicleId": "1",
 	        "startDate" : "2016-05-01",
-	        "endDate": "2016-05-05"
+	        "endDate": "2016-05-05",
+	        "firstName" : "Thor",
+	        "lastName": "Odinson"
 	    },
 	    {
 	    	"bookingId": "9",
 	        "userId": "123",
 	        "vehicleId": "102",
 	        "startDate" : "2016-05-01",
-	        "endDate": "2016-05-05"
+	        "endDate": "2016-05-05",
+	        "firstName" : "Selina",
+	        "lastName": "Kyle"
 	    }
     ]
 }
