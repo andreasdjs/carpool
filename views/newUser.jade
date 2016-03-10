@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  #add
+    form(method='POST', action='http://localhost:3000/addNewUser')
+      h1 SKAPA NY ANVÄNDARE
+      div
+        label(for='userId')
+          b User ID
+        div
+        input(type='text', name='userId', placeholder='ID')
+      div
+        label(for='employeeNumber')
+          b Anställningsnummer
+        div
+        input(type='text', name='employeeNumber', placeholder='Anställningsnummer')
+      div
+        label(for='firstName')
+          b Förnamn
+        div
+        input(type='text', name='firstName', placeholder='Förnamn')
+      div
+        label(for='lastName')
+          b Efternamn
+        div
+        input(type='text', name='lastName', placeholder='Efternamn')
+      div
+        label(for='email')
+          b E-post
+        div
+        input(type='text', name='email', placeholder='E-post')
+      div
+        label(for='username')
+          b Användarnamn
+        div
+        input(type='text', name='username', placeholder='username')
+      p
+        button.myButton Skapa användare
+      if written
+        p#notification Ny användare skapad

@@ -56,7 +56,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Bensin",
-			"mileage": "134304",
+			"mileage": "943044",
 			"lastInspectionMonth" : "5",
 			"latestAnnualCarInspection" : "2015"
 		},
@@ -1155,7 +1155,7 @@
 			"transmission":"automatisk",
 			"type": "XL",
 			"fuel": "El",
-			"mileage": "134324",
+			"mileage": "5324",
 			"status": "unavailable",
 			"lastInspectionMonth" : "12",
 			"latestAnnualCarInspection" : "2015"
@@ -1168,7 +1168,7 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "84324",
 			"lastInspectionMonth" : "1",
 			"latestAnnualCarInspection" : "2015"
 		},
@@ -1180,7 +1180,7 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "64324",
 			"lastInspectionMonth" : "2",
 			"latestAnnualCarInspection" : "2015"
 		},
@@ -1192,7 +1192,7 @@
 			"transmission":"manuell",
 			"type": "S",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "1",
 			"lastInspectionMonth" : "3",
 			"latestAnnualCarInspection" : "2015"
 		},
@@ -1204,7 +1204,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "324",
 			"lastInspectionMonth" : "4",
 			"latestAnnualCarInspection" : "2015"
 		},
@@ -1216,7 +1216,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "334324",
 			"lastInspectionMonth" : "5",
 			"latestAnnualCarInspection" : "2015"
 		},
@@ -1228,7 +1228,7 @@
 			"transmission":"manuell",
 			"type": "M",
 			"fuel": "Bensin",
-			"mileage": "134324",
+			"mileage": "434324",
 			"lastInspectionMonth" : "6",
 			"latestAnnualCarInspection" : "2015"
 		},
@@ -1240,7 +1240,7 @@
 			"transmission":"manuell",
 			"type": "L",
 			"fuel": "Diesel",
-			"mileage": "134324",
+			"mileage": "534324",
 			"lastInspectionMonth" : "7",
 			"latestAnnualCarInspection" : "2015"
 		}
