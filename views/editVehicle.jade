@@ -3,26 +3,68 @@ extends layout
 block content
   #edit
     form(method='POST', action='/getVehicles')
-      h1 EDIT VEHICLE
-      div
-        input(type='text', name='id', placeholder='#{vehicle.id}')
-      div
-        input(type='text', name='brand', placeholder='#{vehicle.brand}')
-      div
-        input(type='text', name='name', placeholder='#{vehicle.name}')
-      div
-        input(type='text', name='transmission', placeholder='#{vehicle.transmission}')
-      div
-        input(type='text', name='regNumber', placeholder='#{vehicle.regNumber}')
-      div
-        input(type='text', name='type', placeholder='#{vehicle.type}')
-      div
-        input(type='text', name='fuel', placeholder='#{vehicle.fuel}')
-      div
-        input(type='text', name='mileage', placeholder='#{vehicle.mileage}')
-      div
-        input(type='text', name='lastInspectionMonth', placeholder='#{vehicle.lastInspectionMonth}')
-      div
-        input(type='text', name='latestAnnualCarInspection', placeholder='#{vehicle.latestAnnualCarInspection}')
+      h1 Ändra
+      .flex-container
+        .flex-item
+          div
+            label(for='id')
+              b Bilens ID (P-plats)
+          div
+          input(type='text', name='id', placeholder='#{vehicle.id}', value='#{vehicle.id}')
+        .flex-item
+          div
+            label(for='brand')
+              b Märke
+          div
+            input(type='text', name='brand', placeholder='#{vehicle.brand}', value='#{vehicle.brand}')
+        .flex-item
+          div
+            label(for='name')
+              b Modell
+          div
+            input(type='text', name='name', placeholder='#{vehicle.name}', value='#{vehicle.name}')
+        .flex-item
+          div
+            label(for='transmission')
+              b Växellåda
+          div
+            input(type='text', name='transmission', placeholder='#{vehicle.transmission}', value='#{vehicle.transmission}')
+        .flex-item
+          div
+            label(for='regNumber')
+              b Registreringsnummer
+          div
+            input(type='text', name='regNumber', placeholder='#{vehicle.regNumber}', value='#{vehicle.regNumber}')
+        .flex-item
+          div
+            label(for='type')
+              b Storlek
+          div
+            input(type='text', name='type', placeholder='#{vehicle.type}', value='#{vehicle.type}')
+        .flex-item
+          div
+            label(for='fuel')
+              b Bränsle
+          div
+            input(type='text', name='fuel', placeholder='#{vehicle.fuel}', value='#{vehicle.fuel}')
+        .flex-item
+          div
+            label(for='mileage')
+              b Miltal
+          div
+            input(type='text', name='mileage', placeholder='#{vehicle.mileage}', value='#{vehicle.mileage}')
+        .flex-item
+          div
+            label(for='lastInspectionMonth')
+              b Sista besiktningsmånad
+          div
+            input(type='text', name='lastInspectionMonth', placeholder='#{vehicle.lastInspectionMonth}', value='#{vehicle.lastInspectionMonth}')
+        .flex-item
+          div
+            label(for='latestAnnualCarInspection')
+              b Senaste årliga besiktning
+          div
+            input(type='text', name='latestAnnualCarInspection', placeholder='#{vehicle.latestAnnualCarInspection}', value='#{vehicle.latestAnnualCarInspection}')
+
       p
         button.myButton Spara

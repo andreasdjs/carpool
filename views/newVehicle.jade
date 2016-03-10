@@ -4,58 +4,67 @@ block content
   #add
     form(method='POST', action='http://localhost:3000/addNewVehicle')
       h1 Lägg till bil
-      div
-        label(for='id')
-          b Bilens ID (P-plats)
-        div
-        input(type='text', name='id', placeholder='ID')
-      div
-        label(for='regNummer')
-          b Registreringsnummer
-        div
-        input(type='text', name='regNummer', placeholder='Regnummer')
-      div
-        label(for='brand')
-          b Bilmärke
-        div
-        input(type='text', name='brand', placeholder='Bilmärke')
-      div
-        label(for='name')
-          b Modell
-        div
-        input(type='text', name='name', placeholder='Model')
-      div
-        label(for='transmission')
-          b Växellåda
-        div
-        input(type='text', name='transmission', placeholder='Växellåda')
-      div
-        label(for='type')
-          b Typ
-        div
-        input(type='text', name='type', placeholder='Typ')
-      div
-        label(for='fuel')
-          b Bränsle
-        div
-        input(type='text', name='fuel', placeholder='Bränsle')
-      div
-        label(for='mileage')
-          b Miltal
-        div
-        input(type='text', name='mileage', placeholder='Miltal')
-      div
-        label(for='lastInspectionMonth')
-          b Besiktningsmånad
-        div
-        input(type='text', name='lastInspectionMonth', placeholder='3')
-      div
-        label(for='lastInspectionMonth')
-          b Besiktigad senast
-        div
-        input(type='text', name='latestAnnualCarInspection', placeholder='2016')
-
-      div
+      .flex-container
+        .flex-item
+          div
+            label(for='id')
+              b Bilens ID (P-plats)
+            div
+            input(type='text', name='id', placeholder='ID')
+        .flex-item
+          div
+            label(for='regNummer')
+              b Registreringsnummer
+            div
+            input(type='text', name='regNummer', placeholder='Regnummer')
+        .flex-item
+          div
+            label(for='brand')
+              b Bilmärke
+            div
+            input(type='text', name='brand', placeholder='Bilmärke')
+        .flex-item
+          div
+            label(for='name')
+              b Modell
+            div
+            input(type='text', name='name', placeholder='Model')
+        .flex-item
+          div
+            label(for='transmission')
+              b Växellåda
+            div
+            input(type='text', name='transmission', placeholder='Växellåda')
+        .flex-item
+          div
+            label(for='type')
+              b Typ
+            div
+            input(type='text', name='type', placeholder='Typ')
+        .flex-item
+          div
+            label(for='fuel')
+              b Bränsle
+            div
+            input(type='text', name='fuel', placeholder='Bränsle')
+        .flex-item
+          div
+            label(for='mileage')
+              b Miltal
+            div
+            input(type='text', name='mileage', placeholder='Miltal')
+        .flex-item
+          div
+            label(for='lastInspectionMonth')
+              b Besiktningsmånad
+            div
+            input(type='text', name='lastInspectionMonth', placeholder='3')
+        .flex-item
+          div
+            label(for='lastInspectionMonth')
+              b Besiktigad senast
+            div
+            input(type='text', name='latestAnnualCarInspection', placeholder='2016')
 
       p
         button.myButton Lägg till bil
