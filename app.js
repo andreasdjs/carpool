@@ -173,10 +173,20 @@ app.post('/loginSent', function(req, res) {
           username: req.body.username
         });
       } else {
+
+        var thisDay = carpool.newTime();
+
         res.render('newBooking', {
+            title: 'Boka fordon',
+            today: thisDay,
+            username: req.body.username
+        });
+
+/*        res.render('newBooking', {
           written: 'User logged in.',
           username: req.body.username
         });
+*/
       }
 
     }
@@ -300,10 +310,18 @@ app.post('/getVehicles', function(req, res) {
 
           }
 
-          // console.log(JSON.stringify(obj));
-
        }
 
+       console.log(JSON.stringify(obj));          
+
+      /* Sort by mileage, ascending order.  */ 
+
+      obj.vehicles.sort(function(a, b){
+        return a.mileage - b.mileage;
+      });
+
+      //console.log(JSON.stringify(obj));
+  
       res.render('availableVehicles', {
           title: 'Tillgängliga fordon (2/3)',
           username: req.cookies.username,
