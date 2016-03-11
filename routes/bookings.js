@@ -6,8 +6,8 @@ var carpool = require('../modules/carpool');
 
 router.get('/', function(req, res, next) {
 
-/* 
-	Getting the data object from readBookings function and 
+/*
+	Getting the data object from readBookings function and
   passing the object to the JADE template.
 */
 
@@ -19,8 +19,8 @@ router.get('/', function(req, res, next) {
 
       console.log('object from readBookings:\n\n' + JSON.stringify(obj));
 
-      /* Filter based on logged in user. 
-         Show only the users bookings if normal user. 
+      /* Filter based on logged in user.
+         Show only the users bookings if normal user.
          Admin can see all. */
 
       if("admin" !== req.cookies.username){
@@ -35,7 +35,7 @@ router.get('/', function(req, res, next) {
 
     	res.render('bookings', {
           username: req.cookies.username,
-        	title: 'Bookings',
+        	title: 'BOKNINGAR',
         	bookings: obj
     	});
 

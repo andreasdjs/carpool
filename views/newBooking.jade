@@ -5,18 +5,15 @@ block content
     form(method='POST', action='/getVehicles')
       h1 HITTA FORDON (1/3)
       | &#x9;
-      |     
       div
-        label(for='startDate') 
+        label(for='startDate')
         b Startdatum
-      |   
-      .dateLayout
-        input(type='date', name='startDate', min='#{today}', required='')
-      div 
+      input(type='date', name='startDate', min='#{today}', required='')
+      div
         label(for='endDate')
           b Slutdatum
-      .dateLayout
-        input(type='date', name='endDate', min='#{today}', required='')
+      input(type='date', name='endDate', min='#{today}', required='')
+      
       .radioLayout
         input(type='radio', name='gender', value='male', checked='')
         |  Företag &nbsp;

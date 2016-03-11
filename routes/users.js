@@ -6,8 +6,8 @@ var carpool = require('../modules/carpool');
 
 router.get('/', function(req, res, next) {
 
-/* 
-	Getting the data object from readCoffee function and 
+/*
+	Getting the data object from readCoffee function and
   	passing the object to the JADE template.
 */
 
@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
     	console.log('Object from readUsers:\n\n' + obj);
 
     	res.render('users', {
-        	title: 'Users',
+        	title: 'ANVÄNDARE',
           username: req.cookies.username,
         	users: obj
     	});
