@@ -319,12 +319,16 @@ tr.alert {
     display: -webkit-flex;
     flex-direction: column;
 	flex-wrap: wrap;
-    width: 30%;
+    width: 520px;
     height: 450px;
 }
 
 .flex-item {
-    width: 250px;
-    height: 80px;
-    margin: 5px;
+    width: 260px;
+    height: 90px;
+    margin: 0px;
+}
+
+label { 
+	line-height: 32px; 
 }
