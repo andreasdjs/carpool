@@ -1,15 +1,12 @@
 extends loginLayout
 
 block content
-  #add
+  #login
     form(method='POST', action='http://localhost:3000/loginSent')
-      h1 LOGIN
-      p
-        b hint: 
-        | admin for admin. lisa, bart, 
-        br
-        | homer, marge for normal user.
-      | &#x9;
+      .logo
+        h1 ALMSTRÖMS
+        h3 SERVICE AB
+        | &#x9;
       div
         input(type='text', name='username', placeholder='Username')
       | &#x9;&#x9;
@@ -30,5 +27,8 @@ block content
       | &#x9;&#x9;
       p
         button.myButton Login
-      if written
-        p#notification Bil bokad.
+      p.tip
+        b hint: 
+        | admin for admin. lisa, bart, 
+        br
+        | homer, marge for normal user.

@@ -8,12 +8,13 @@ block content
       div
         label(for='startDate')
         b Startdatum
-      input(type='date', name='startDate', min='#{today}', required='')
+      .dateLayout
+        input(type='date', name='startDate', min='#{today}', required='')
       div
         label(for='endDate')
           b Slutdatum
-      input(type='date', name='endDate', min='#{today}', required='')
-      
+      .dateLayout
+        input(type='date', name='endDate', min='#{today}', required='')
       .radioLayout
         input(type='radio', name='gender', value='male', checked='')
         |  Företag &nbsp;

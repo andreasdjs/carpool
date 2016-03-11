@@ -80,10 +80,47 @@ button, input, select, textarea {
   padding: 12px;
 }
 
+/* login form */
+
+#login {
+	width: 500px;
+	margin: 0 auto;
+
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.logo {
+	margin-bottom: 46px;
+}
+
+#login .logo h1 {
+    font-size: 46px;
+	letter-spacing: 8px;
+	font-weight: normal;
+	line-height: 46px;
+	margin-bottom: 0px;
+}
+
+#login .logo h3 {
+    font-size: 18px;
+	letter-spacing: 4px;
+	font-weight: normal;
+}
+
+.tip {
+	font-size:10px;
+	margin-top: 24px;
+}
+
+
 /* add form */
 
 #add, #edit {
 	padding-left: 32px;
+	margin-bottom: 46px;
 }
 
 form h1 { margin-bottom: 16px;}
@@ -92,6 +129,9 @@ form h1 { margin-bottom: 16px;}
 
 input {
 	margin-bottom: 2px;
+	outline: none;
+	border: 1px solid #999;
+
 }
 
 /* Input focused with fat bottom border below */
@@ -278,15 +318,13 @@ tr.alert {
 .flex-container {
     display: -webkit-flex;
     flex-direction: column;
-		flex-wrap: wrap;
+	flex-wrap: wrap;
     width: 30%;
-    height: 550px;
-		background-color: ;
+    height: 450px;
 }
 
 .flex-item {
     width: 250px;
-    height: 100px;
+    height: 80px;
     margin: 5px;
-		background-color: ;
 }
