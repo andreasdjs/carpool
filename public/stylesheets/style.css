@@ -128,7 +128,7 @@ form h1 { margin-bottom: 16px;}
 /* Input */
 
 input {
-	margin-bottom: 2px;
+	margin-bottom: 4px;
 	outline: none;
 	border: 1px solid #999;
 
@@ -137,7 +137,7 @@ input {
 /* Input focused with fat bottom border below */
 
 input:focus {
-	border-bottom: solid #10C010 4px;
+	border-bottom: solid #10C010 5px;
 	margin-bottom: 0px;
 }
 
