@@ -137,7 +137,8 @@ input {
 /* Input focused with fat bottom border below */
 
 input:focus {
-	border-bottom: solid #10C010 5px;
+/*	border-bottom: solid #10C010 5px; */
+	border-bottom: solid #45bc56 5px;
 	margin-bottom: 0px;
 }
 

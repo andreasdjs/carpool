@@ -297,6 +297,44 @@ function getTodaysMonth() {
     return thisMonth;
 }
 
+/* Inactivate booking by id and write */ 
+
+function cancelBooking(callback, id) {
+  var fileReadStream = fs.createReadStream('bookings.txt');
+  var data = "";
+
+  fileReadStream.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  fileReadStream.on('end', () => {
+      var obj = JSON.parse(data);
+
+      /* Loop through booking object to find booking */
+      /* Set it to canceled. */
+
+      for (var i=0; i<obj.bookings.length; i++) {
+        if (obj.bookings[i].bookingId == id) {
+          obj.bookings[i].canceled = 1;
+          break;
+        }
+      }
+
+      var writeData = JSON.stringify(obj)
+      console.log("writeData: " + writeData);
+
+      fs.writeFile('bookings.txt', writeData, (err) => {
+        if (err) throw err;
+        console.log('Canceled booking and wrote file.');
+      }); 
+
+      callback(obj);
+
+  });
+}
+
+module.exports.cancelBooking = cancelBooking;
+
 module.exports.getTodaysMonth = getTodaysMonth;
 
 module.exports.getBookingsMaxId = getBookingsMaxId;

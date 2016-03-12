@@ -4,23 +4,31 @@ block content
   #listContainer
     #productList
       h1 BOKNINGAR
-      table
-        thead
-          tr
-            th Bokningsnr
-            th Anställningsnr
-            th Startdatum
-            th Slutdatum
-            th Bil id
-            th Förnamn
-            th Efternamn
-          tbody
-            each item, i in bookings.bookings
-              tr
-                td= item.bookingId
-                td= item.userId
-                td= item.startDate
-                td= item.endDate
-                td= item.vehicleId
-                td= item.firstName
-                td= item.lastName
+      form(method='POST', action='/cancelBooking')
+        table
+          thead
+            tr
+              th id
+              th A.-nr
+              th Startdatum
+              th Slutdatum
+              th Bil id
+              th Förnamn
+              th Efternamn
+              th Canceled
+              th Expired
+              th 
+            tbody
+              each item, i in bookings.bookings
+                tr
+                  td= item.bookingId
+                  td= item.userId
+                  td= item.startDate
+                  td= item.endDate
+                  td= item.vehicleId
+                  td= item.firstName
+                  td= item.lastName
+                  td= item.canceled
+                  td= item.expired
+                  td 
+                    button(name='bookingId',value='#{item.bookingId}',id='btnAdd',type='submit') Avboka

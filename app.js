@@ -266,7 +266,9 @@ app.post('/sent', function(req, res) {
         "startDate" : req.body.startDate,
         "endDate": req.body.endDate,
         "firstName": req.cookies.firstName,
-        "lastName" : req.cookies.lastName
+        "lastName" : req.cookies.lastName,
+        "canceled" : 0,
+        "expired" : 0
       };
 
       carpool.writeNewBooking(writeNewObject);
@@ -284,6 +286,49 @@ app.post('/sent', function(req, res) {
     firstName: req.cookies.firstName,
     lastName: req.cookies.lastName
   });
+
+});
+
+/* Recieve post from bookings-page, with booking cancelation */
+
+
+app.post('/cancelBooking', function(req, res) {
+
+  // console.log('Cancel booking with id:' + req.body.bookingId);
+
+  var id = req.body.bookingId; // bookingId from form post 
+
+  carpool.cancelBooking(pushBookings, id);
+
+  // console.log('Booking list as: ' + req.cookies.username);
+
+  function pushBookings(obj){
+
+    // console.log('object from readBookings:\n\n' + JSON.stringify(obj));
+
+    /* Filter based on logged in user.
+       Show only the users bookings if normal user.
+       Admin can see all. */
+
+    if("admin" !== req.cookies.username){
+
+      obj.bookings = obj.bookings.filter(function (el) {
+        return el.userId == req.cookies.employeeNumber;
+      });
+
+      // console.log('New object from readBookings:\n\n' + JSON.stringify(obj));
+
+    }
+
+    /* Show bookings page */ 
+
+    res.render('bookings', {
+        username: req.cookies.username,
+        title: 'BOKNINGAR',
+        bookings: obj
+    });
+
+  }
 
 });
 

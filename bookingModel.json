@@ -7,7 +7,9 @@
 	        "startDate" : "2016-01-01",
 	        "endDate": "2016-01-05",
 	        "firstName" : "Tony",
-	        "lastName": "Stark"
+	        "lastName": "Stark",
+	        "canceled": 0,
+	        "expired": 1
 	    },
 	    {
 	    	"bookingId": "2",
@@ -16,7 +18,9 @@
 	        "startDate" : "2016-02-01",
 	        "endDate": "2016-02-05",
 	        "firstName" : "Peter",
-	        "lastName": "Parker"
+	        "lastName": "Parker",
+	        "canceled": 0,
+	        "expired": 1
 	    },
 	    {
 	    	"bookingId": "3",
@@ -25,16 +29,20 @@
 	        "startDate" : "2016-03-01",
 	        "endDate": "2016-03-05",
 	        "firstName" : "Clark",
-	        "lastName": "Kent"
+	        "lastName": "Kent",
+	        "canceled": 0,
+	        "expired": 1
 	    },
 	    {
 	    	"bookingId": "4",
 	        "userId": "123",
 	        "vehicleId": "1",
-	        "startDate" : "2016-04-01",
+	        "startDate" : "2016-03-11",
 	        "endDate": "2016-04-05",
 	        "firstName" : "Peter",
-	        "lastName": "Parker"	        
+	        "lastName": "Parker",
+	        "canceled": 0,
+	        "expired": 0	        
 	    },
 	    {
 	    	"bookingId": "5",
@@ -43,7 +51,9 @@
 	        "startDate" : "2016-05-01",
 	        "endDate": "2016-05-05",
 	        "firstName" : "James",
-	        "lastName": "Howlett"
+	        "lastName": "Howlett",
+	        "canceled": 0,
+	        "expired": 0
 	    },
 	    {
 	    	"bookingId": "6",
@@ -52,7 +62,9 @@
 	        "startDate" : "2016-05-01",
 	        "endDate": "2016-05-05",
 	        "firstName" : "Anakin",
-	        "lastName": "Skywalker"
+	        "lastName": "Skywalker",
+	        "canceled": 0,
+	        "expired": 0
 	    },
 	    {
 	    	"bookingId": "7",
@@ -61,16 +73,20 @@
 	        "startDate" : "2016-04-01",
 	        "endDate": "2016-04-05",
 	        "firstName" : "Bruce",
-	        "lastName": "Banner"
+	        "lastName": "Banner",
+	        "canceled": 0,
+	        "expired": 0
 	    },
 	    {
 	    	"bookingId": "8",
 	        "userId": "123",
-	        "vehicleId": "1",
-	        "startDate" : "2016-05-01",
-	        "endDate": "2016-05-05",
+	        "vehicleId": "12",
+	        "startDate" : "2016-07-01",
+	        "endDate": "2016-07-05",
 	        "firstName" : "Thor",
-	        "lastName": "Odinson"
+	        "lastName": "Odinson",
+	        "canceled": 1,
+	        "expired": 0
 	    },
 	    {
 	    	"bookingId": "9",
@@ -79,7 +95,20 @@
 	        "startDate" : "2016-05-01",
 	        "endDate": "2016-05-05",
 	        "firstName" : "Selina",
-	        "lastName": "Kyle"
+	        "lastName": "Kyle",
+	        "canceled": 0,
+	        "expired": 0
+	    },
+	    {
+	    	"bookingId": "10",
+	        "userId": "123",
+	        "vehicleId": "4",
+	        "startDate" : "2016-03-12",
+	        "endDate": "2016-04-12",
+	        "firstName" : "Selina",
+	        "lastName": "Kyle",
+	        "canceled": 1,
+	        "expired": 0
 	    }
     ]
 }
