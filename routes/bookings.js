@@ -33,6 +33,10 @@ router.get('/', function(req, res, next) {
 
       }
 
+      /* Reverse order */
+
+      obj.bookings.reverse();
+
     	res.render('bookings', {
           username: req.cookies.username,
         	title: 'BOKNINGAR',

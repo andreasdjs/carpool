@@ -117,7 +117,7 @@ function writeNewBooking(newEntryObject) {
   	// Writing to disk
   	fs.writeFile('bookings.txt', write, (err) => {
   	  if (err) throw err;
-  	  console.log('Why...New bookings data file written including new object!');
+  	  console.log('New bookings data file written including new object!');
   	}); 
 
   });

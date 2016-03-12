@@ -320,6 +320,10 @@ app.post('/cancelBooking', function(req, res) {
 
     }
 
+    /* Reverse listing, newest first. */
+
+    obj.bookings.reverse();
+
     /* Show bookings page */ 
 
     res.render('bookings', {
