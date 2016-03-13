@@ -343,7 +343,7 @@ function cancelBooking(callback, id) {
   });
 }
 
-/* Inactivate booking by id and write */ 
+/* Update vehicle by Id */ 
 
 function updateVehicleById(callback, id, updatedObject) {
   var fileReadStream = fs.createReadStream('vehicles.txt');
@@ -381,7 +381,49 @@ function updateVehicleById(callback, id, updatedObject) {
   });
 }
 
+/* Update vehicle inspection date by Id */ 
 
+function updateVehicleInspectionById(callback, id, inspected) {
+  var fileReadStream = fs.createReadStream('vehicles.txt');
+  var data = "";
+
+  fileReadStream.on('data', (chunk) => {
+    data += chunk;
+  });
+
+  fileReadStream.on('end', () => {
+      var obj = JSON.parse(data);
+
+      /* Loop through booking object to find booking */
+      /* Set it to canceled. */
+
+//      console.log("updatedObject inside: " + JSON.stringify(updatedObject));
+
+        console.log("inspected inside function:" + inspected);
+
+      for (var i=0; i<obj.vehicles.length; i++) {
+        if (obj.vehicles[i].id == id) {
+          obj.vehicles[i].latestAnnualCarInspection = inspected;
+          break;
+        }
+      }
+
+      var writeData = JSON.stringify(obj)
+      // console.log("writeData: " + writeData);
+
+      fs.writeFile('vehicles.txt', writeData, (err) => {
+        if (err) throw err;
+        console.log('Wrote file with updated vehicle object.');
+      }); 
+
+      callback(obj);
+
+  });
+}
+
+
+
+module.exports.updateVehicleInspectionById = updateVehicleInspectionById;
 
 module.exports.updateVehicleById = updateVehicleById;
 

@@ -27,9 +27,9 @@ block content
                   td= item.lastInspectionMonth
                   td= item.latestAnnualCarInspection
                   td
-                    button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Besiktigad
+                    button(id='btnAdd',onClick='location.href="inspected?id=#{item.id}&inspected=#{thisYear}-#{zeroThisMonth}";return false;') Besiktigad
                   td
-                    button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
+                    //button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
               - else if (thisMonth > item.lastInspectionMonth)
                 tr.warning
                   td= item.id
@@ -39,9 +39,9 @@ block content
                   td= item.lastInspectionMonth
                   td= item.latestAnnualCarInspection
                   td
-                    button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Besiktigad
+                    button(id='btnAdd',onClick='location.href="inspected?id=#{item.id}&inspected=#{thisYear}-#{zeroThisMonth}";return false;') Besiktigad
                   td
-                    button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
+                    //button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
 
               - else
                 tr
@@ -52,6 +52,6 @@ block content
                   td= item.lastInspectionMonth
                   td= item.latestAnnualCarInspection
                   td
-                    button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Besiktigad
+                    button(id='btnAdd',onClick='location.href="inspected?id=#{item.id}&inspected=#{thisYear}-#{zeroThisMonth}";return false;') Besiktigad
                   td
-                    button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
+                    //button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera

@@ -34,7 +34,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "3",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2016-03"
 		},
 		{
     		"id":"4",
@@ -155,7 +155,7 @@
 			"fuel": "Diesel",
 			"mileage": "134324",
 			"lastInspectionMonth" : "1",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-12"
 		},
 		{
     		"id":"14",
@@ -167,7 +167,7 @@
 			"fuel": "Bensin",
 			"mileage": "324",
 			"lastInspectionMonth" : "2",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2016-02"
 		},
 		{
     		"id":"15",
@@ -469,7 +469,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "3",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2016-03"
 		},
 		{
     		"id":"40",
@@ -759,7 +759,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "3",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2016-03"
 		},
 		{
     		"id":"64",
@@ -1194,7 +1194,7 @@
 			"fuel": "Bensin",
 			"mileage": "1",
 			"lastInspectionMonth" : "3",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2016-03"
 		},
 		{
     		"id":"100",

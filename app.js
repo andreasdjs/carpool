@@ -391,6 +391,27 @@ app.post('/updateVehicle', function(req, res) {
 });
 
 
+/* Recieve post from edit vehicle page and update datafile */
+
+app.get('/inspected', function(req, res) {
+
+
+  var id = req.param('id');
+  var inspected = req.param('inspected');
+  console.log("Inspected: " + inspected);
+  console.log("id: " + id);
+
+  carpool.updateVehicleInspectionById(pushVehicle, id, inspected)
+
+  function pushVehicle(obj){
+
+    res.redirect('/TODO');
+
+  }
+
+});
+
+
 /* Recieve POST data from select date form*/
 
 app.post('/getVehicles', function(req, res) {
