@@ -289,8 +289,8 @@ app.post('/sent', function(req, res) {
 
 });
 
-/* Recieve post from bookings-page, with booking cancelation */
 
+/* Recieve post from bookings-page, with booking cancelation */
 
 app.post('/cancelBooking', function(req, res) {
 
@@ -376,6 +376,45 @@ app.post('/editVehicle', function(req, res) {
       vehicles: obj
     });
 */
+
+  }
+
+});
+
+/* Recieve post from edit vehicle page and update datafile */
+
+app.post('/updateVehicle', function(req, res) {
+
+  var id = req.body.id; // bookingId from form post 
+
+  var newObject =
+  {
+      "id": req.body.id,
+      "regNumber": req.body.regNumber,
+      "brand": req.body.brand,
+      "name": req.body.name,
+      "transmission": req.body.transmission,
+      "type": req.body.type,
+      "fuel": req.body.fuel,
+      "mileage": req.body.mileage,
+      "lastInspectionMonth" : req.body.lastInspectionMonth,
+      "latestAnnualCarInspection" : req.body.latestAnnualCarInspection
+    }
+
+  carpool.updateVehicleById(pushVehicle, id, newObject)
+
+  function pushVehicle(obj){
+
+    /* Show vehicle list page with updated vehicle */ 
+
+    var thisMonth = carpool.getTodaysMonth();
+
+    res.render('list', {
+        title: 'Vehicles',
+        thisMonth: thisMonth,
+        username: req.cookies.username,
+        vehicles: obj
+    });
 
   }
 
