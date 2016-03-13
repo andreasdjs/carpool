@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "test": "mocha ./test/test.js"    
+    "test": "mocha ./test/test.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "debug": "~2.2.0",
     "express": "~4.13.1",
     "jade": "~1.11.0",
+    "list.js": "^1.2.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
   },

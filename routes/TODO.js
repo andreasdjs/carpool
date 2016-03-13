@@ -19,11 +19,11 @@ router.get('/', function(req, res, next) {
 
     var thisYear = carpool.getTodaysYear();
     console.log('thisYear: ' + thisYear);
-
+/*
     obj.vehicles = obj.vehicles.filter(function (el) {
       return parseInt(el.latestAnnualCarInspection) !== thisYear;
     });
-
+*/
 
     var thisMonth = carpool.getTodaysMonth();
 

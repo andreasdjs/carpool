@@ -3,16 +3,20 @@ extends layout
 block content
   //h1= title
   #listContainer
+    //#productList
     #productList
-      h1 FORDON 
-      //- if (thisMonth == '3')
-        p Denna månad: #{thisMonth}
-      //- else
-        p Ingen månad.
+      h1 FORDON       
       div
-        button(id='btnAdd',onClick='location.href="newVehicle";')  Lägg till bil
-        br
-        br
+        |     
+        input.search(placeholder='Search')
+        |     
+        //button.sort(data-sort='name')
+          | Sort by name
+        |  &#x9;
+        span.buttonSpan
+          button(id='btnAdd',onClick='location.href="newVehicle";')  Lägg till bil
+          br
+          br
       form(method='POST', action='/editVehicle')
         table
           thead
@@ -25,16 +29,16 @@ block content
               th Bränsle
               //th lastInspectionMonth
               th(colspan='2')
-          tbody
+          tbody.list
             each item, i in vehicles.vehicles
               - if (thisMonth == item.lastInspectionMonth)
                 tr.alert
-                  td= item.id
-                  td= item.regNumber
-                  td= item.brand
-                  td= item.name
-                  td= item.type
-                  td= item.fuel
+                  td.id= item.id
+                  td.regNumber= item.regNumber
+                  td.brand= item.brand
+                  td.name= item.name
+                  td.type= item.type
+                  td.fuel= item.fuel
                   //td= item.lastInspectionMonth
                   td
                     button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Ändra
@@ -42,14 +46,16 @@ block content
                     button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
               - else
                 tr
-                  td= item.id
-                  td= item.regNumber
-                  td= item.brand
-                  td= item.name
-                  td= item.type
-                  td= item.fuel
+                  td.id= item.id
+                  td.regNumber= item.regNumber
+                  td.brand= item.brand
+                  td.name= item.name
+                  td.type= item.type
+                  td.fuel= item.fuel
                   //td= item.lastInspectionMonth
                   td
                     button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Ändra
                   td
                     button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
+          script(src='http://listjs.com/no-cdn/list.js')
+          script(src='/js/script.js')                

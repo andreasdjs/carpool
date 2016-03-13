@@ -389,3 +389,7 @@ label {
 .canceledBooking {
 	color: #c0c0c0;
 }
+
+.buttonSpan {
+	padding-left:18px;
+}

@@ -40,15 +40,28 @@ block content
                 th 
               tbody
                 each item, i in bookings.bookings
-                  tr
-                    td= item.bookingId
-                    td= item.userId
-                    td= item.startDate
-                    td= item.endDate
-                    td= item.vehicleId
-                    td= item.firstName
-                    td= item.lastName
-                    td= item.canceled
-                    td= item.expired
-                    td 
-                      button(name='bookingId',value='#{item.bookingId}',id='btnDelete',type='submit') Avboka
+                  - if (item.canceled !== 0)
+                    tr
+                      td= item.bookingId
+                      td= item.userId
+                      td= item.startDate
+                      td= item.endDate
+                      td= item.vehicleId
+                      td= item.firstName
+                      td= item.lastName
+                      td= item.canceled
+                      td= item.expired
+                      td 
+                  - else
+                    tr
+                      td= item.bookingId
+                      td= item.userId
+                      td= item.startDate
+                      td= item.endDate
+                      td= item.vehicleId
+                      td= item.firstName
+                      td= item.lastName
+                      td= item.canceled
+                      td= item.expired
+                      td 
+                        button(name='bookingId',value='#{item.bookingId}',id='btnDelete',type='submit') Avboka                  
