@@ -298,8 +298,13 @@ function getBookingsMaxId(callback) {
 function getTodaysMonth() {
     var today = new Date();
     var thisMonth = today.getMonth()+1; //January is 0!
-    // console.log("Denna månad: " + thisMonth);
     return thisMonth;
+}
+
+function getTodaysYear() {
+    var today = new Date();
+    var thisYear = today.getFullYear();
+    return thisYear;
 }
 
 /* Inactivate booking by id and write */ 
@@ -383,6 +388,7 @@ module.exports.updateVehicleById = updateVehicleById;
 module.exports.cancelBooking = cancelBooking;
 
 module.exports.getTodaysMonth = getTodaysMonth;
+module.exports.getTodaysYear = getTodaysYear;
 
 module.exports.getBookingsMaxId = getBookingsMaxId;
 

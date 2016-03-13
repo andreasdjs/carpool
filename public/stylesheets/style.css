@@ -316,6 +316,11 @@ tr.alert {
 	color: white;
 }
 
+tr.warning {
+	background-color: #ffe169;
+/*	color: white; */
+}
+
 .dateLayout {
 	padding-bottom:12px;
 }

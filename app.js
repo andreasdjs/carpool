@@ -11,6 +11,7 @@ var fs = require('fs');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var list = require('./routes/list');
+var TODO = require('./routes/TODO');
 var bookings = require('./routes/bookings');
 var newBooking = require('./routes/newBooking');
 var newVehicle = require('./routes/newVehicle');
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/list', list);
+app.use('/TODO', TODO);
 app.use('/bookings', bookings);
 app.use('/newBooking', newBooking);
 app.use('/newVehicle', newVehicle);
@@ -142,24 +144,6 @@ app.post('/addNewVehicle',function(req,res){
 
 });
 
-app.post('/addNewVehicle',function(req,res){
-	var writeNewVehicle = req.body;
-
-  carpool.readVehicles(pushContent);
-
-  function pushContent(obj){
-
-    obj.vehicles.push(writeNewVehicle)
-      //console.log(obj);
-    var newData = JSON.stringify(obj);
-
-    fs.writeFile("vehicles.txt", newData, (err) => {
-      if (err) throw err;
-      console.log("Data file written with new vehicle.");
-    });
-    }
-	}); // end add post
-
 /* Handle post from addNewUser */
 
 app.post('/addNewUser',function(req,res){
@@ -235,11 +219,6 @@ app.post('/loginSent', function(req, res) {
             username: req.body.username
         });
 
-/*        res.render('newBooking', {
-          written: 'User logged in.',
-          username: req.body.username
-        });
-*/
       }
 
     }
@@ -367,15 +346,6 @@ app.post('/editVehicle', function(req, res) {
       username: req.cookies.username,
       vehicle: editVehicleObj
     });
-/*
-    res.render('editVehicle', {
-      vehicleId: req.body.vehicleId,
-      startDate : req.body.startDate,
-      endDate: req.body.endDate,
-      username: req.cookies.username,
-      vehicles: obj
-    });
-*/
 
   }
 

@@ -22,7 +22,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "2",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"3",
@@ -34,7 +34,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "3",
-			"latestAnnualCarInspection" : "2016"
+			"latestAnnualCarInspection" : "2015"
 		},
 		{
     		"id":"4",
@@ -179,7 +179,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "3",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"16",
@@ -191,7 +191,7 @@
 			"fuel": "Diesel",
 			"mileage": "13424",
 			"lastInspectionMonth" : "4",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"17",
@@ -263,7 +263,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "10",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"23",
@@ -433,7 +433,7 @@
 			"mileage": "134324",
 			"status": "unavailable",
 			"lastInspectionMonth" : "12",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		    	{
     		"id":"37",
@@ -614,7 +614,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "3",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"52",
@@ -710,7 +710,7 @@
 			"fuel": "Diesel",
 			"mileage": "134324",
 			"lastInspectionMonth" : "11",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"60",
@@ -795,7 +795,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "6",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"67",
@@ -904,7 +904,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "3",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"76",
@@ -1025,7 +1025,7 @@
 			"fuel": "Diesel",
 			"mileage": "134324",
 			"lastInspectionMonth" : "1",
-			"latestAnnualCarInspection" : "2015"
+			"latestAnnualCarInspection" : "2016"
 		},
 		{
     		"id":"86",

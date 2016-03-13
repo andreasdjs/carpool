@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  //h1= title
+  #listContainer
+    #productList
+      h1 FORDON ATT ÅTGÄRDA
+      form(method='POST', action='/editVehicle')
+        table
+          thead
+            tr
+              th ID
+              th Reg nummer
+              th Bilmärke
+              th Modell
+              th 1 månad till körförbud
+              th Senaste besiktningsår
+              th(colspan='2')
+          tbody
+            each item, i in vehicles.vehicles
+              - if (thisMonth == item.lastInspectionMonth)
+                tr.alert
+                  td= item.id
+                  td= item.regNumber
+                  td= item.brand
+                  td= item.name
+                  td= item.lastInspectionMonth
+                  td= item.latestAnnualCarInspection
+                  td
+                    button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Besiktigad
+                  td
+                    button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
+              - else if (thisMonth > item.lastInspectionMonth)
+                tr.warning
+                  td= item.id
+                  td= item.regNumber
+                  td= item.brand
+                  td= item.name
+                  td= item.lastInspectionMonth
+                  td= item.latestAnnualCarInspection
+                  td
+                    button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Besiktigad
+                  td
+                    button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
+
+              - else
+                tr
+                  td= item.id
+                  td= item.regNumber
+                  td= item.brand
+                  td= item.name
+                  td= item.lastInspectionMonth
+                  td= item.latestAnnualCarInspection
+                  td
+                    button(name='vehicleId',value='#{item.id}',id='btnAdd',type='submit') Besiktigad
+                  td
+                    button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
