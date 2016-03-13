@@ -225,9 +225,14 @@ function checkBookingsByDate(callback, start, end) {
 
         console.log('Upptaget!');
         console.log("Vehicle clashing: " + element.vehicleId);
-        // do something
-        clashingVehicles.push(element.vehicleId);
 
+        // If not canceled, push vehicle id to array
+
+        if (element.canceled !== 1) {
+          clashingVehicles.push(element.vehicleId);
+        }
+
+  
       } else {
 
         console.log('Ledigt!');

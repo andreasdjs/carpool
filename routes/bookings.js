@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
           return el.userId == req.cookies.employeeNumber;
         });
 
-        console.log('New object from readBookings:\n\n' + JSON.stringify(obj));
+        // console.log('New object from readBookings:\n\n' + JSON.stringify(obj));
 
       }
 
