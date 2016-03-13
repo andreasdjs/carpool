@@ -17,6 +17,8 @@ block content
             th Förnamn
             th Efternamn
             th E-post
+            th
+            th
           tbody
             each item, i in users.users
               tr
@@ -25,3 +27,8 @@ block content
                 td= item.firstName
                 td= item.lastName
                 td= item.email
+                td
+                  button(name='vehicleId',value='#{item.id}',id='btnAdd', onClick='location.href="editUser?id=#{item.userId}";return false;') Ändra
+                td
+                  button(id='btnAdd',onClick='location.href="removeUser?id=#{item.userId}";return false;') Radera
+
