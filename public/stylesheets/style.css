@@ -321,6 +321,15 @@ tr.warning {
 /*	color: white; */
 }
 
+tr.warning:nth-child(odd) {
+	background-color: #ffe169;
+}
+
+tr.warning:nth-child(even) {
+	background-color: #ffe992;
+}
+
+
 .dateLayout {
 	padding-bottom:12px;
 }

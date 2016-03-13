@@ -46,7 +46,7 @@
 			"fuel": "Diesel",
 			"mileage": "124324",
 			"lastInspectionMonth" : "4",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-04"
 		},
 		{
     		"id":"5",
@@ -58,7 +58,7 @@
 			"fuel": "Bensin",
 			"mileage": "943044",
 			"lastInspectionMonth" : "5",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-05"
 		},
 		{
     		"id":"6",
@@ -70,7 +70,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "6",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-06"
 		},
 		{
     		"id":"7",
@@ -82,7 +82,7 @@
 			"fuel": "Diesel",
 			"mileage": "134324",
 			"lastInspectionMonth" : "7",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-07"
 		},
 		{
     		"id":"8",
@@ -94,7 +94,7 @@
 			"fuel": "Bensin",
 			"mileage": "34324",
 			"lastInspectionMonth" : "8",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-08"
 		},
 		{
     		"id":"9",
@@ -106,7 +106,7 @@
 			"fuel": "Bensin",
 			"mileage": "134324",
 			"lastInspectionMonth" : "9",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-09"
 		},
 		{
     		"id":"10",
@@ -118,7 +118,7 @@
 			"fuel": "Bensin",
 			"mileage": "4324",
 			"lastInspectionMonth" : "10",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-10"
 		},
 		{
     		"id":"11",
@@ -130,7 +130,7 @@
 			"fuel": "Diesel",
 			"mileage": "134324",
 			"lastInspectionMonth" : "11",
-			"latestAnnualCarInspection" : "2015-01"
+			"latestAnnualCarInspection" : "2015-11"
 		},
 		{
     		"id":"12",
@@ -142,8 +142,8 @@
 			"fuel": "El",
 			"mileage": "134324",
 			"status": "unavailable",
-			"lastInspectionMonth" : "12",
-			"latestAnnualCarInspection" : "2015-01"
+			"lastInspectionMonth" : "3",
+			"latestAnnualCarInspection" : "2015-03"
 		},
 		    	{
     		"id":"13",
@@ -432,8 +432,8 @@
 			"fuel": "El",
 			"mileage": "134324",
 			"status": "unavailable",
-			"lastInspectionMonth" : "12",
-			"latestAnnualCarInspection" : "2015-12"
+			"lastInspectionMonth" : "3",
+			"latestAnnualCarInspection" : "2015-03"
 		},
 		    	{
     		"id":"37",

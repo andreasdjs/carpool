@@ -15,7 +15,7 @@ block content
               th Modell
               th 1 månad till körförbud
               th Senaste besiktning
-              th(colspan='2')
+              th
           tbody
             each item, i in vehicles.vehicles
               - if (thisMonth == item.lastInspectionMonth)
@@ -28,9 +28,7 @@ block content
                   td= item.latestAnnualCarInspection
                   td
                     button(id='btnAdd',onClick='location.href="inspected?id=#{item.id}&inspected=#{thisYear}-#{zeroThisMonth}";return false;') Besiktigad
-                  td
-                    //button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
-              - else if (thisMonth > item.lastInspectionMonth)
+              - else if (thisMonth-item.lastInspectionMonth == 2 || thisMonth-item.lastInspectionMonth == 1 || thisMonth-item.lastInspectionMonth == -9 || item.lastInspectionMonth-thisMonth == 1 || item.lastInspectionMonth-thisMonth == 2 || item.lastInspectionMonth-thisMonth == 3)
                 tr.warning
                   td= item.id
                   td= item.regNumber
@@ -40,18 +38,3 @@ block content
                   td= item.latestAnnualCarInspection
                   td
                     button(id='btnAdd',onClick='location.href="inspected?id=#{item.id}&inspected=#{thisYear}-#{zeroThisMonth}";return false;') Besiktigad
-                  td
-                    //button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
-
-              - else
-                tr
-                  td= item.id
-                  td= item.regNumber
-                  td= item.brand
-                  td= item.name
-                  td= item.lastInspectionMonth
-                  td= item.latestAnnualCarInspection
-                  td
-                    button(id='btnAdd',onClick='location.href="inspected?id=#{item.id}&inspected=#{thisYear}-#{zeroThisMonth}";return false;') Besiktigad
-                  td
-                    //button(id='btnAdd',onClick='location.href="removeVehicle?id=#{item.id}";return false;') Radera
