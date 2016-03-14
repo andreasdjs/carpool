@@ -32,7 +32,8 @@ block content
           tbody.list
             each item, i in vehicles.vehicles
               - if (thisMonth == item.lastInspectionMonth)
-                tr.alert
+                //tr.alert
+                tr
                   td.id= item.id
                   td.regNumber= item.regNumber
                   td.brand= item.brand

@@ -84,35 +84,6 @@ app.get('/removeVehicle', function(req, res) {
 
 });
 
-  //console.log(req.body.id);
-  /*
-  var gugge = req.body.id;
-  console.log("post request: " + req.body.id);
-  var stream = fs.createReadStream('vehicles.txt');
-  var data='';
-
-
-      stream.on('data',function(chunk){
-      data += chunk;
-      }); // end stream data
-
-      stream.on('end',function(){
-        var obj = JSON.parse(data);
-
-        var filtered_obj = obj.filter(function(value){
-          return value.id !== gugge;
-        });
-
-        obj = JSON.stringify(filtered_obj);
-        console.log("Toni obj: " + obj);
-
-
-        fs.writeFile('carM.json',obj);
-      });// end stream end
-    */
-/*}
-*/
-
 /* Handle post from addNewVehicle */
 
 app.post('/addNewVehicle',function(req,res){
