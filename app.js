@@ -170,7 +170,9 @@ app.post('/addNewUser',function(req,res){
 
 app.post('/loginSent', function(req, res) {
 
-  res.cookie('username', req.body.username);
+  /* Setting cookie for 15 min */
+  res.cookie('username', req.body.username, { maxAge: 15*60*1000 });
+//  res.cookie('username', req.body.username);
 
   /*
   Insert cookie for employee number
@@ -188,9 +190,15 @@ app.post('/loginSent', function(req, res) {
 
       console.log("Setting cookie, employeeNumber: " + obj.users[0].employeeNumber);
 
-      res.cookie('employeeNumber', obj.users[0].employeeNumber);
-      res.cookie('firstName', obj.users[0].firstName);
-      res.cookie('lastName', obj.users[0].lastName);
+      /* Setting cookies for 15 min */
+
+      res.cookie('employeeNumber', obj.users[0].employeeNumber, { maxAge: 15*60*1000 });
+      res.cookie('firstName', obj.users[0].firstName, { maxAge: 15*60*1000 });
+      res.cookie('lastName', obj.users[0].lastName, { maxAge: 15*60*1000 });
+
+      // res.cookie('employeeNumber', obj.users[0].employeeNumber);
+      // res.cookie('firstName', obj.users[0].firstName);
+      // res.cookie('lastName', obj.users[0].lastName);
 
       // console.log('cookie set:' + req.cookies.username);
       // console.log(req.body.username + " tried to login.")
