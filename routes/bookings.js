@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 
     function pushContent(obj){
 
-      console.log('object from readBookings:\n\n' + JSON.stringify(obj));
+      // console.log('object from readBookings:\n\n' + JSON.stringify(obj));
 
       /* Filter based on logged in user.
          Show only the users bookings if normal user.

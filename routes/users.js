@@ -13,11 +13,11 @@ router.get('/', function(req, res, next) {
 
 	carpool.readUsers(pushContent);
 
-    console.log('username cookie: ' + req.cookies.username);
+    // console.log('username cookie: ' + req.cookies.username);
 
     function pushContent(obj){
 
-    	console.log('Object from readUsers:\n\n' + obj);
+    	// console.log('Object from readUsers:\n\n' + JSON.stringify(obj));
 
     	res.render('users', {
         	title: 'ANVÄNDARE',

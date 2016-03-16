@@ -32,6 +32,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+/* Initial check for user coookies */
+
+app.use('*', function(req, res, next) {
+
+  if (
+    (req.originalUrl !== '/login') 
+    && (req.originalUrl !== '/loginSent') 
+    && !req.cookies.username
+    ) {
+    res.redirect('login');
+  }
+
+  next();
+
+});
+
 app.use('/', routes);
 app.use('/users', users);
 app.use('/list', list);
@@ -41,6 +58,9 @@ app.use('/newBooking', newBooking);
 app.use('/newVehicle', newVehicle);
 app.use('/newUser', newUser);
 app.use('/login', login);
+
+
+
 
 
 /* Initial Write of JSON-data */
@@ -348,6 +368,7 @@ app.post('/updateVehicle', function(req, res) {
 
     /* Show vehicle list page with updated vehicle */ 
 
+/*
     var thisMonth = carpool.getTodaysMonth();
 
     res.render('list', {
@@ -356,6 +377,10 @@ app.post('/updateVehicle', function(req, res) {
         username: req.cookies.username,
         vehicles: obj
     });
+
+    */
+
+    res.redirect('/list');
 
   }
 
