@@ -42,7 +42,8 @@ app.use('*', function(req, res, next) {
     && (req.originalUrl !== '/loginSent') 
     && !req.cookies.username
     ) {
-    res.redirect('login');
+    res.render('login');  // Using render, as redirect shows the URL in location bar.
+//    res.redirect('login');
   }
 
   next();
