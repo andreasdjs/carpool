@@ -90,9 +90,24 @@ function initialWriteVehicles() {
   fileReadStream.on('end', () => {
     fs.writeFile('vehicles.txt', data, (err) => {
       if (err) throw err;
+      console.log('Deprecated. Use initialWriteVehiclesPiped.');
       console.log('New fresh JSON vehicles data file written.');
     }); 
   });
+}
+
+/* 
+  Inspired by http://www.sitepoint.com/basics-node-js-streams/
+*/
+
+function initialWriteVehiclesPiped() {
+
+  var readableStream = fs.createReadStream('carModel.json');
+  var writableStream = fs.createWriteStream('vehicles.txt');
+
+  readableStream.pipe(writableStream);
+  console.log('New fresh JSON vehicles data file written. Piped.');
+
 }
 
 
@@ -437,6 +452,7 @@ module.exports.getBookingsMaxId = getBookingsMaxId;
 module.exports.initialWriteBookings = initialWriteBookings;
 module.exports.initialWriteUsers = initialWriteUsers;
 module.exports.initialWriteVehicles = initialWriteVehicles;
+module.exports.initialWriteVehiclesPiped = initialWriteVehiclesPiped;
 
 module.exports.writeNewBooking = writeNewBooking;
 

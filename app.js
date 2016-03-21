@@ -67,7 +67,8 @@ app.use('/login', login);
 /* Initial Write of JSON-data */
 
 carpool.initialWriteBookings();
-carpool.initialWriteVehicles();
+//carpool.initialWriteVehicles();
+carpool.initialWriteVehiclesPiped();
 carpool.initialWriteUsers();
 
 /* Remove vehicle */
